@@ -11,7 +11,7 @@ Otak yang macet dan program yang *error* adalah makanan sehari-hari ketika bar
 
 ## **Belajar tidak harus selalu fokus**
 
-Mungkin kamu familiar dengan **mode** **fokus** ketika belajar**,** dimana di mode ini kamu memaksimalkan perhatianmu pada satu hal saja dan meminimalisir distraksi.
+Mungkin kamu familiar dengan **mode** **fokus** ketika belajar, dimana di mode ini kamu memaksimalkan perhatianmu pada satu hal saja dan meminimalisir distraksi.
 
 Banyak anggapan kalau mode fokus ini adalah satu-satunya mode untuk belajar. Padahal seringkali, jika terlalu fokus, kamu malah bisa *stuck* ketika menghadapi suatu permasalahan.
 
@@ -21,9 +21,7 @@ Hal ini bagus jika kamu sudah familiar dengan permasalahan yang ada, tapi bagaim
 
 Di sini kamu perlu beralih ke mode berpikir lain, yaitu **mode tersebar** (atau *diffuse mode*), dimana kamu membiarkan pikiranmu tersebar ke berbagai arah, menghubungkan ide satu dengan ide lainnya.
 
-![](https://miro.medium.com/max/60/1*ESPWVVQphbeealZvQ_bdFw.png?q=20)
-
-![](https://miro.medium.com/max/1280/1*ESPWVVQphbeealZvQ_bdFw.png)
+![Mode fokus dan tersebar.](https://miro.medium.com/max/1280/1*ESPWVVQphbeealZvQ_bdFw.png "Mode fokus dan tersebar.")
 
 Mode fokus dan tersebar (gambar dari [instructables.com](https://www.instructables.com/Learning-How-to-Learn/))
 
@@ -53,9 +51,7 @@ Demonstrasi atau panduan yang kamu terima dan ikuti ini memberikan ilusi kalau k
 
 Yang perlu kamu lakukan agar materi-materi yang kamu pelajari ini awet adalah dengan **belajar secara aktif**, yang terjadi ketika kamu menghadapi tantangan tanpa dipandu proses pemecahan permasalahannya.
 
-![](https://miro.medium.com/max/60/1*AAz2Tc2IC5nmjH_NvfCZ2g.jpeg?q=20)
-
-![](https://miro.medium.com/max/938/1*AAz2Tc2IC5nmjH_NvfCZ2g.jpeg)
+![Otak berolahraga.](https://miro.medium.com/max/938/1*AAz2Tc2IC5nmjH_NvfCZ2g.jpeg "Otak berolahraga.")
 
 Bukan hanya otot, otakmu juga perlu olahraga (gambar dari [the-scientist.com](https://www.the-scientist.com/features/this-is-your-brain-on-exercise-64934))
 
@@ -96,9 +92,7 @@ Pernah *gak* kamu langsung menemukan jawaban ketika sedang menjelaskan suatu p
 
 Nah, ini salah satu contoh betapa bergunanya pertanyaan dan penjelasan yang mendetail untuk membantumu memecahkan permasalahanmu.
 
-![](https://miro.medium.com/max/60/1*_M45vuDJh8DsoH0jEHmgRg.jpeg?q=20)
-
-![](https://miro.medium.com/max/2500/1*_M45vuDJh8DsoH0jEHmgRg.jpeg)
+![Rubberduck debugging.](https://miro.medium.com/max/2500/1*_M45vuDJh8DsoH0jEHmgRg.jpeg "Rubberduck debugging.")
 
 Bebek-bebek ini siap mendengarkan curhatan *programming*-mu (gambar dari [gitduck.com](https://gitduck.com/blog/improve-how-to-code-with-rubber-duck-debugging/))
 
