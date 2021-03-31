@@ -9,9 +9,13 @@
     "export": "yarn build && next export"
   },
   "dependencies": {
+    "gray-matter": "^4.0.2",
+    "js-yaml": "^4.0.0",
     "next": "10.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.17",

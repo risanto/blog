@@ -1,17 +1,35 @@
-import Head from 'next/head'
+import Head from "next/head"
+import Layout from '../components/Layout'
+import PostItem from '../components/PostItem'
+import { fetchAllPostContent } from '../lib/posts'
 
-export default function Home() {
-  return (
-    <div className={"container"}>
-      <Head>
-        <title>Risan's Blog</title>
-      </Head>
+export default function Index({ posts }) {
+    return (
+        <>
+            <Head>
+              <title>Risan's Blog</title>
+            </Head>
+            <Layout>
+              <main>
+                <ul>
+                    {posts.map((post, idx) => {
+                        return <li key={idx}>
+                            <PostItem post={post}/>
+                        </li>
+                    })}
+                </ul>
+              </main>
+            </Layout>
+        </>
+    )
+}
 
-      <main className={""}>
-      </main>
+export async function getStaticProps () {
+    const posts = fetchAllPostContent()
 
-      <footer className={""}>
-      </footer>
-    </div>
-  )
+    return {
+        props: {
+            posts
+        }
+    }
 }
