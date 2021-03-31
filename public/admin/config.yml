@@ -1,6 +1,6 @@
 backend:
-  name: test-repo #to be used locally
-  # name: git-gateway #to be used after deployed to netlify
+  # name: test-repo #to be used locally
+  name: git-gateway #to be used after deployed to netlify
   branch: main
 publish_mode: editorial_workflow
 media_folder: public/img
