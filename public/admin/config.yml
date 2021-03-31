@@ -121,7 +121,7 @@ collections:
           displayFields: ["tags.*.name"]
           valueField: "tags.*.slug"
 
-      - label: Languages
+      - label: Language
         name: "languages"
         widget: relation
         collection: "meta"

@@ -1,4 +1,5 @@
 import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 import Layout from '../../components/Layout'
 
 export default function Post(props) {
@@ -11,10 +12,10 @@ export default function Post(props) {
 
     return (
         <Layout>
-            <article>
+            <article className={"p-4"}>
                 <header>
-                    <h1>{postData.title}</h1>
-                    <p>{postData.date}</p>
+                    <h1 className={"font-bold text-xl"}>{postData.title}</h1>
+                    <p className={"text-gray-500"}>{postData.date}</p>
                     <img
                         src={formatImgSrc(postData.thumbnail)}
                     />
@@ -31,10 +32,13 @@ export default function Post(props) {
 }
 
 export async function getStaticProps({ params }) {
+    let postData = await getPostData(params.slug)
+    postData.author = await getAuthor(postData.author)
+    postData.language = await getLanguage(postData.language)
+    postData.tags = await getTags(postData.tags)
+
     return {
-        props: {
-            postData: await getPostData(params.slug)
-        }
+        props: { postData }
     }
 }
 
