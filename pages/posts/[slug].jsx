@@ -10,22 +10,34 @@ export default function Post(props) {
             ? thumbnail : `/${thumbnail}`
     }
 
+    let date = new Date(postData.date)
+    date = date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
+
     return (
         <Layout>
             <article className={"p-4"}>
                 <header>
                     <h1 className={"font-bold text-xl"}>{postData.title}</h1>
-                    <p className={"text-gray-500"}>{postData.date}</p>
+                    <p className={"text-gray-700"}>{postData.author.name} / {date}
+                    </p>
                     <img
+                        className={"mt-4"}
                         src={formatImgSrc(postData.thumbnail)}
                     />
                 </header>
-                <div
+                <section
                     className={"cms-content"}
                     dangerouslySetInnerHTML={
                         { __html: postData.contentHtml }
                     }>
-                </div>
+                </section>
+                <section className={"py-10"}>
+                    <ul className={"float-right"}>
+                        {postData.tags.map(tag => {
+                            return <li>#{tag.name}</li>
+                        })}
+                    </ul>
+                </section>
             </article>
         </Layout>
     )

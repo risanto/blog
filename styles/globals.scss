@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cms-content {
+  @apply text-gray-800;
+
+  & p {
+    @apply mt-4;
+  }
+
+  & h2, h3 {
+    @apply mt-6;
+  }
+
+  & h6 {
+    @apply text-sm text-gray-600;
+  }
+
+  & ul, ol {
+    @apply list-outside ml-6;
+  }
+
+  & ul {
+    @apply list-disc;
+  }
+
+  & ol {
+    @apply list-decimal;
+  }
+
+  & li {
+    @apply mt-2;
+  }
+
+  & a {
+    @apply text-blue-700 underline;
+  }
+}

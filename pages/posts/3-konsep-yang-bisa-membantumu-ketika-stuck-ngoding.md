@@ -7,11 +7,13 @@ tags:
 language: id
 thumbnail: https://miro.medium.com/max/875/1*HXKAKuaydw8sxLJRh3sp7g.png
 ---
-Otak yang macet dan program yang *error* adalah makanan sehari-hari ketika baru belajar *programming.* Tiga konsep di bawah ini mungkin bisa membantumu mengatasi permasalahan ini.
+Otak yang macet dan program yang  *error*  adalah makanan sehari-hari ketika baru belajar *programming.* Tiga konsep di bawah ini mungkin bisa membantumu mengatasi permasalahan ini.
+
+...
 
 ## **Belajar tidak harus selalu fokus**
 
-Mungkin kamu familiar dengan **mode** **fokus** ketika belajar, dimana di mode ini kamu memaksimalkan perhatianmu pada satu hal saja dan meminimalisir distraksi.
+Mungkin kamu familiar dengan  **mode** **fokus**  ketika belajar, dimana di mode ini kamu memaksimalkan perhatianmu pada satu hal saja dan meminimalisir distraksi.
 
 Banyak anggapan kalau mode fokus ini adalah satu-satunya mode untuk belajar. Padahal seringkali, jika terlalu fokus, kamu malah bisa *stuck* ketika menghadapi suatu permasalahan.
 
@@ -23,11 +25,11 @@ Di sini kamu perlu beralih ke mode berpikir lain, yaitu **mode tersebar** (ata
 
 ![Mode fokus dan tersebar.](https://miro.medium.com/max/1280/1*ESPWVVQphbeealZvQ_bdFw.png "Mode fokus dan tersebar.")
 
-Mode fokus dan tersebar (gambar dari [instructables.com](https://www.instructables.com/Learning-How-to-Learn/))
+###### Mode fokus dan tersebar (gambar dari  [instructables.com](https://www.instructables.com/Learning-How-to-Learn/))
 
 Jika otak diibaratkan seperti mesin *pinball*, di mode fokus jarak antara *bumper* yang ada rapat-rapat sehingga pikiranmu terpusat di satu area saja.
 
-Sementara di mode tersebar jarak antara *bumper* lebih renggang sehingga pikiranmu bisa lebih leluasa untuk loncat dan menghubungkan berbagai ide*.*
+Sementara di mode tersebar jarak antara *bumper* lebih renggang sehingga pikiranmu bisa lebih leluasa untuk loncat dan menghubungkan berbagai ide.
 
 Mode tersebar membantumu melihat gambaran besar dari permasalahan yang kamu hadapi dan juga menghubungkan permasalahan baru dengan konsep-konsep yang telah kamu pelajari sebelumnya.
 
@@ -53,7 +55,7 @@ Yang perlu kamu lakukan agar materi-materi yang kamu pelajari ini awet adalah de
 
 ![Otak berolahraga.](https://miro.medium.com/max/938/1*AAz2Tc2IC5nmjH_NvfCZ2g.jpeg "Otak berolahraga.")
 
-Bukan hanya otot, otakmu juga perlu olahraga (gambar dari [the-scientist.com](https://www.the-scientist.com/features/this-is-your-brain-on-exercise-64934))
+###### Bukan hanya otot, otakmu juga perlu olahraga (gambar dari [the-scientist.com](https://www.the-scientist.com/features/this-is-your-brain-on-exercise-64934))
 
 Salah satu cara belajar aktif yang cukup efektif adalah *active recall,* dimana kamu memaksa otakmu untuk berpikir dan memanggil kembali materi-materi yang telah kamu pelajari sebelumnya.
 
@@ -71,7 +73,7 @@ Ketika kamu menghadapi suatu permasalahan di programmu, salah satu hal yang akan
 
 Dalam bertanya ada etiketnya juga. Pastikan kalau kamu tidak menghabiskan waktu orang lain dengan pertanyaan yang tidak deskriptif seperti: “Tolong bantu dong, kok programku masih bermasalah ya?”
 
-Bandingkan dengan pertanyaan ini: “Jadi aku sedang mengerjakan program A, di program ini aku mau mengimplementasikan B, aku sudah mencoba C dan D tapi kok masih seperti ini *output*-nya. Sepertinya permasalahannya di E*,* tapi aku *gak* yakin juga. Kira-kira *gimana* ya cara mengatasinya?”
+Bandingkan dengan pertanyaan ini: “Jadi aku sedang mengerjakan program A, di program ini aku mau mengimplementasikan B, aku sudah mencoba C dan D tapi kok masih seperti ini *output*-nya. Sepertinya permasalahannya di E, tapi aku *gak* yakin juga. Kira-kira *gimana* ya cara mengatasinya?”
 
 Contoh di atas adalah pertanyaan yang lebih baik, karena kamu menjelaskan:
 
@@ -94,7 +96,7 @@ Nah, ini salah satu contoh betapa bergunanya pertanyaan dan penjelasan yang mend
 
 ![Rubberduck debugging.](https://miro.medium.com/max/2500/1*_M45vuDJh8DsoH0jEHmgRg.jpeg "Rubberduck debugging.")
 
-Bebek-bebek ini siap mendengarkan curhatan *programming*-mu (gambar dari [gitduck.com](https://gitduck.com/blog/improve-how-to-code-with-rubber-duck-debugging/))
+###### Bebek-bebek ini siap mendengarkan curhatan *programming*-mu (gambar dari [gitduck.com](https://gitduck.com/blog/improve-how-to-code-with-rubber-duck-debugging/))
 
 Lalu bagaimana jika tidak ada orang yang bisa kamu tanya?
 
@@ -107,13 +109,15 @@ Seperti ini caranya:
 3. Bayangkan si bebek sangat penasaran akan seluk-beluk programmu, jadi kamu harus bisa meng-*cover* semua hal yang ingin dia mengerti.
 4. Apakah kamu sudah menemukan solusinya? Banyak *programmer* menemukan solusi ketika mereka menjelaskan langkah-langkah suatu aplikasi terhadap si bebek. Saltik, salah variabel atau salah sintaksis bisa terdeteksi melalui proses *rubber duck debugging* ini.
 
+...
+
 Dari tiga konsep yang telah dijelaskan di atas, berikut kesimpulan yang bisa kamu ambil:
 
 1. Agar proses pembelajaran optimal, kamu harus bisa **pindah dari mode fokus ke mode tersebar** dan sebaliknya. Ketika otakmu macet, pindah ke permasalahan lain atau lakukan hal yang bisa membuatmu rileks dulu sebelum kembali fokus mencari solusinya lagi.
 2. Menonton video atau mengikuti instruksi saja tidak cukup. Kamu perlu **belajar secara aktif dan mengetes pemahamanmu** serta menggali kembali materi yang telah kamu pelajari sebelumnya.
 3. Ketika ada masalah dan kamu ingin bertanya, **jelaskan programmu sedetail mungkin dalam bahasa yang bebek mainan pun bisa mengerti**. Seringkali, orang-orang mendapatkan solusi dari proses penjelasan dan formulasi pertanyaan ini.
 
-**Referensi**
+### **Referensi**
 
 Abdaal, Ali (2019). *How my friend ranked 1st at Medical School — The Active Recall Framework*. <https://www.youtube.com/watch?v=fDbxPVn02VU>
 
