@@ -2,23 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro&display=swap');
+
 .cms-content {
-  @apply text-gray-800;
+  @apply text-gray-700;
+
+  & :first-child {
+    @apply mt-10;
+  }
 
   & p {
-    @apply mt-4;
+    @apply mt-6;
+    font-family: 'Libre Baskerville', serif;
   }
 
   & h2, h3 {
-    @apply mt-6;
+    @apply mt-12 text-black;
+  }
+
+  & h2 {
+    @apply text-2xl;
+  }
+
+  & h3 {
+    @apply text-xl;
   }
 
   & h6 {
-    @apply text-sm text-gray-600;
+    @apply text-sm text-gray-500 text-center;
   }
 
   & ul, ol {
     @apply list-outside ml-6;
+    font-family: 'Libre Baskerville', serif;
   }
 
   & ul {
@@ -34,6 +50,6 @@
   }
 
   & a {
-    @apply text-blue-700 underline;
+    @apply text-blue-500 underline;
   }
 }

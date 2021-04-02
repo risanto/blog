@@ -15,28 +15,28 @@ export default function Post(props) {
 
     return (
         <Layout>
-            <article className={"p-4"}>
+            <article className={"p-4 max-w-screen-md mx-auto"}>
                 <header>
-                    <h1 className={"font-bold text-xl"}>{postData.title}</h1>
+                    <h1 className={"font-bold text-4xl"}>{postData.title}</h1>
                     <p className={"text-gray-700"}>{postData.author.name} / {date}
                     </p>
                     <img
                         className={"mt-4"}
                         src={formatImgSrc(postData.thumbnail)}
                     />
+                    <div className={"py-2"}>
+                        <ul className={"float-right"}>
+                            {postData.tags.map(tag => {
+                                return <li>#{tag.name}</li>
+                            })}
+                        </ul>
+                    </div>
                 </header>
                 <section
                     className={"cms-content"}
                     dangerouslySetInnerHTML={
                         { __html: postData.contentHtml }
                     }>
-                </section>
-                <section className={"py-10"}>
-                    <ul className={"float-right"}>
-                        {postData.tags.map(tag => {
-                            return <li>#{tag.name}</li>
-                        })}
-                    </ul>
                 </section>
             </article>
         </Layout>

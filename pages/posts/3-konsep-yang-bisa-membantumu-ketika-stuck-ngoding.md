@@ -7,7 +7,7 @@ tags:
 language: id
 thumbnail: https://miro.medium.com/max/875/1*HXKAKuaydw8sxLJRh3sp7g.png
 ---
-Otak yang macet dan program yang  *error*  adalah makanan sehari-hari ketika baru belajar *programming.* Tiga konsep di bawah ini mungkin bisa membantumu mengatasi permasalahan ini.
+Otak yang macet dan program yang  *error*  adalah makanan sehari-hari ketika baru belajar  *programming.* Tiga konsep di bawah ini mungkin bisa membantumu mengatasi permasalahan ini.
 
 ...
 
@@ -21,15 +21,15 @@ Karena di mode ini otakmu berusaha berpikir cepat dengan mengingat-ingat hal yan
 
 Hal ini bagus jika kamu sudah familiar dengan permasalahan yang ada, tapi bagaimana jika kamu dihadapkan dengan hal yang benar-benar baru?
 
-Di sini kamu perlu beralih ke mode berpikir lain, yaitu **mode tersebar** (atau *diffuse mode*), dimana kamu membiarkan pikiranmu tersebar ke berbagai arah, menghubungkan ide satu dengan ide lainnya.
+Di sini kamu perlu beralih ke mode berpikir lain, yaitu **mode tersebar**  (atau *diffuse mode*), dimana kamu membiarkan pikiranmu tersebar ke berbagai arah, menghubungkan ide satu dengan ide lainnya.
 
 ![Mode fokus dan tersebar.](https://miro.medium.com/max/1280/1*ESPWVVQphbeealZvQ_bdFw.png "Mode fokus dan tersebar.")
 
 ###### Mode fokus dan tersebar (gambar dari  [instructables.com](https://www.instructables.com/Learning-How-to-Learn/))
 
-Jika otak diibaratkan seperti mesin *pinball*, di mode fokus jarak antara *bumper* yang ada rapat-rapat sehingga pikiranmu terpusat di satu area saja.
+Jika otak diibaratkan seperti mesin  *pinball*,  di mode fokus jarak antara  *bumper*  yang ada rapat-rapat sehingga pikiranmu terpusat di satu area saja.
 
-Sementara di mode tersebar jarak antara *bumper* lebih renggang sehingga pikiranmu bisa lebih leluasa untuk loncat dan menghubungkan berbagai ide.
+Sementara di mode tersebar jarak antara  *bumper*  lebih renggang sehingga pikiranmu bisa lebih leluasa untuk loncat dan menghubungkan berbagai ide.
 
 Mode tersebar membantumu melihat gambaran besar dari permasalahan yang kamu hadapi dan juga menghubungkan permasalahan baru dengan konsep-konsep yang telah kamu pelajari sebelumnya.
 
@@ -43,7 +43,7 @@ Pernah *gak sih* kamu mendapatkan inspirasi ketika sedang mandi? Nah, ini sala
 
 Mungkin kamu pernah menonton video atau mengikuti *lecture* yang membuatmu merasa paham akan suatu materi, tapi ketika kamu coba terapkan lagi sendiri ternyata tidak banyak yang kamu ingat.
 
-Atau kamu telah selesai mengerjakan *challenges* Codecademy, tapi setelahnya pelajaran yang kamu dapat terasa menguap begitu saja ketika harus diaplikasikan kembali.
+Atau kamu telah selesai mengerjakan  *challenges*  Codecademy, tapi setelahnya pelajaran yang kamu dapat terasa menguap begitu saja ketika harus diaplikasikan kembali.
 
 Di contoh-contoh di atas ini kamu **belajar secara pasif,** dimana kamu hanya menyimak atau mengikuti materi yang disodorkan saja.
 
