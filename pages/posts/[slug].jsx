@@ -1,6 +1,7 @@
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 import Layout from '../../components/Layout'
+import Link from 'next/link'
 
 export default function Post(props) {
     const { postData } = props
@@ -28,9 +29,15 @@ export default function Post(props) {
                         <ul className={"float-right"}>
                             {postData.tags.map((tag, idx) => {
                                 return <li
-                                className={"bg-indigo-50 hover:bg-indigo-100"}
-                                key={idx}
-                                >#{tag.name}</li>
+                                    className={"bg-indigo-50 hover:bg-indigo-100"}
+                                    key={idx}
+                                >
+                                    <Link href={"/?tag=" + tag.slug}>
+                                        <a>
+                                            #{tag.name}
+                                        </a>
+                                    </Link>
+                                </li>
                             })}
                         </ul>
                     </div>
