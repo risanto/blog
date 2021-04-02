@@ -4,7 +4,6 @@ import Layout from '../../components/Layout'
 
 export default function Post(props) {
     const { postData } = props
-    console.log(postData.contentHtml)
 
     function formatImgSrc(thumbnail) {
         return thumbnail.includes('http')
