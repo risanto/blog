@@ -3,8 +3,11 @@ import Layout from '../components/Layout'
 import PostItem from '../components/PostItem'
 import { fetchAllPostContent } from '../lib/posts'
 import { getAllLanguages, getAllTags } from '../lib/meta'
+import { useRouter } from 'next/router'
 
 export default function Index({ posts, languages, tags }) {
+    const { query } = useRouter()
+
     return (
         <>
             <Head>
