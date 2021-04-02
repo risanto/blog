@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Layout from '../components/Layout'
 import PostItem from '../components/PostItem'
+import TagItem from '../components/TagItem'
 import { fetchAllPostContent } from '../lib/posts'
 import { getAllLanguages, getAllTags } from '../lib/meta'
 import { useRouter } from 'next/router'
@@ -16,17 +17,17 @@ export default function Index({ posts, languages, tags }) {
             <Layout>
                 <main>
                     <ul>
-                        <li>All</li>
-                        {languages.map((language, idx) => {
-                            return <li key={idx}>
+                        <li key={"all"}>All</li>
+                        {languages.map((language) => {
+                            return <li key={language.slug}>
                                 {language.slug}
                             </li>
                         })}
                     </ul>
-                    <ul>
+                    <ul className={"flex"}>
                         {tags.map((tag, idx) => {
                             return <li key={idx}>
-                                {tag.name}
+                            <TagItem tag={tag}/>
                             </li>
                         })}
                     </ul>
