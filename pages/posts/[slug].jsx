@@ -2,7 +2,6 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 import Layout from '../../components/Layout'
 import TagItem from '../../components/TagItem'
-import Link from 'next/link'
 
 export default function Post(props) {
     const { postData } = props
@@ -17,7 +16,7 @@ export default function Post(props) {
 
     return (
         <Layout>
-            <article className={"px-4 pt-4 pb-16 max-w-screen-md mx-auto"}>
+            <article>
                 <header>
                     <h1 className={"font-bold text-4xl"}>{postData.title}</h1>
                     <p className={"text-gray-700 mt-4"}>{postData.author.name} / {date}
@@ -27,7 +26,7 @@ export default function Post(props) {
                         src={formatImgSrc(postData.thumbnail)}
                     />
                     <div className={"pt-2 text-gray-600"}>
-                        <ul className={"float-right"}>
+                        <ul className={"flex justify-end"}>
                             {postData.tags.map((tag, idx) => {
                                 return <li key={idx}>
                                     <TagItem tag={tag} />
@@ -36,12 +35,12 @@ export default function Post(props) {
                         </ul>
                     </div>
                 </header>
-                <section
+                <main
                     className={"cms-content"}
                     dangerouslySetInnerHTML={
                         { __html: postData.contentHtml }
                     }>
-                </section>
+                </main>
             </article>
         </Layout>
     )

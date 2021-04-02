@@ -14,9 +14,11 @@ export default function PostItem({ post }) {
                     <p>{date}</p>
                 </a>
             </Link>
-            <ul className={"float-right"}>
+            <ul className={"flex justify-end"}>
                 {post.data.tags.map((tag, idx) => {
-                    return <li key={idx}>
+                    return <li
+                        key={idx}
+                    >
                         <TagItem tag={tag} />
                     </li>
                 })}
