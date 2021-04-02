@@ -24,10 +24,13 @@ export default function Post(props) {
                         className={"mt-4"}
                         src={formatImgSrc(postData.thumbnail)}
                     />
-                    <div className={"py-4"}>
+                    <div className={"pt-2 text-gray-600"}>
                         <ul className={"float-right"}>
                             {postData.tags.map((tag, idx) => {
-                                return <li key={idx}>#{tag.name}</li>
+                                return <li
+                                className={"bg-indigo-50 hover:bg-indigo-100"}
+                                key={idx}
+                                >#{tag.name}</li>
                             })}
                         </ul>
                     </div>
@@ -45,9 +48,9 @@ export default function Post(props) {
 
 export async function getStaticProps({ params }) {
     let postData = await getPostData(params.slug)
-    postData.author = await getAuthor(postData.author)
-    postData.language = await getLanguage(postData.language)
-    postData.tags = await getTags(postData.tags)
+    postData.author = getAuthor(postData.author)
+    postData.language = getLanguage(postData.language)
+    postData.tags = getTags(postData.tags)
 
     return {
         props: { postData }

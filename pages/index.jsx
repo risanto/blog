@@ -41,7 +41,7 @@ export default function Index({ posts, languages, tags }) {
 }
 
 export async function getStaticProps() {
-    const posts = fetchAllPostContent()
+    const posts = await fetchAllPostContent()
     const languages = await getAllLanguages()
     const tags = await getAllTags()
 
