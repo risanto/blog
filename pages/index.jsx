@@ -16,21 +16,23 @@ export default function Index({ posts, languages, tags }) {
             </Head>
             <Layout>
                 <main>
-                    <ul>
-                        <li key={"all"}>All</li>
-                        {languages.map((language) => {
-                            return <li key={language.slug}>
-                                {language.slug}
-                            </li>
-                        })}
-                    </ul>
-                    <ul className={"flex"}>
-                        {tags.map((tag, idx) => {
-                            return <li key={idx}>
-                                <TagItem tag={tag} />
-                            </li>
-                        })}
-                    </ul>
+                    <section className={"flex"}>
+                        <ul>
+                            <li key={"all"}>All</li>
+                            {languages.map((language) => {
+                                return <li key={language.slug}>
+                                    {language.slug}
+                                </li>
+                            })}
+                        </ul>
+                        <ul className={"flex ml-2"}>
+                            {tags.map((tag, idx) => {
+                                return <li key={idx}>
+                                    <TagItem tag={tag} />
+                                </li>
+                            })}
+                        </ul>
+                    </section>
                     <ul>
                         {posts.map((post, idx) => {
                             return <li

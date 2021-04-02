@@ -5,14 +5,16 @@ export default function Nav() {
     const { theme, setTheme } = useTheme()
 
     return (
-        <nav className={"flex py-4 px-4 justify-between sticky top-0 bg-white dark:bg-black max-w-screen-md mx-auto"}>
+        <nav className={"flex py-4 px-2 justify-between sticky top-0 bg-white dark:bg-black max-w-screen-md mx-auto"}>
             <ul className={"flex"}>
                 <li>
                     <Link href="/">
-                        <a>Home</a>
+                        <a
+                        className={"hover:underline p-1"}
+                        >Home</a>
                     </Link>
                 </li>
-                <li className={"ml-4"}>
+                <li className={"hover:underline ml-4"}>
                     <Link href="/about">
                         <a>About</a>
                     </Link>

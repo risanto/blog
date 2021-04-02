@@ -12,9 +12,10 @@ export default function PostItem({ post }) {
                     <img src={post.data.thumbnail} />
                     <div className={"px-2"}>
                         <h2
-                            className={"font-bold text-xl mt-2"}
+                            className={"font-medium text-xl mt-2"}
                         >{post.data.title}</h2>
-                        <p>{date}</p>
+                        <p className={"text-sm"}
+                        >{date}</p>
                     </div>
                 </a>
             </Link>
