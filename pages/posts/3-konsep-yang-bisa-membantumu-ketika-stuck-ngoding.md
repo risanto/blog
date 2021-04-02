@@ -117,10 +117,10 @@ Dari tiga konsep yang telah dijelaskan di atas, berikut kesimpulan yang bisa kam
 
 ### **Referensi**
 
-Abdaal, Ali (2019). *How my friend ranked 1st at Medical School — The Active Recall Framework*. <https://www.youtube.com/watch?v=fDbxPVn02VU>
+Abdaal, Ali (2019). *How my friend ranked 1st at Medical School — The Active Recall Framework.* <https://www.youtube.com/watch?v=fDbxPVn02VU>
 
-Monteiro, Thiago (2019). *Improve how you code: Understanding Rubber Duck Debugging.* <https://gitduck.com/blog/improve-how-to-code-with-rubber-duck-debugging/>
+Monteiro, Thiago (2019). *Improve how you code: Understanding Rubber Duck Debugging.* <https://gitduck.com/blog/improve-how-to-code-with-rubber-duck-debugging/>
 
 Oakley, Barbara. (2014). A Mind For Numbers: How to Excel at Math and Science (Even If You Flunked Algebra).
 
-Omi, Shu. (2020). *How I Use Notion for Studying — Learn to Code with Active Recalling*. <https://www.youtube.com/watch?v=fDbxPVn02VU>
+Omi, Shu. (2020). *How I Use Notion for Studying — Learn to Code with Active Recalling.* <https://www.youtube.com/watch?v=fDbxPVn02VU>

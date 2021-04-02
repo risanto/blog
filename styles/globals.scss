@@ -7,6 +7,10 @@
 .cms-content {
   @apply text-gray-700;
 
+  & :after { // add space after nbsp
+    content: " "; display: inline-block; width: 0; 
+  }
+
   & >:first-child {
     @apply mt-10;
   }
@@ -50,6 +54,10 @@
   }
 
   & a {
-    @apply text-blue-500 underline;
+    @apply bg-blue-50;
+  }
+
+  & a:hover {
+    @apply bg-blue-100;
   }
 }
