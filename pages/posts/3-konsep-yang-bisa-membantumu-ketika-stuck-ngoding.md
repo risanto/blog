@@ -59,13 +59,13 @@ Yang perlu kamu lakukan agar materi-materi yang kamu pelajari ini awet adalah de
 
 Salah satu cara belajar aktif yang cukup efektif adalah *active recall,* dimana kamu memaksa otakmu untuk berpikir dan memanggil kembali materi-materi yang telah kamu pelajari sebelumnya.
 
-Contoh cara belajar *programming* dengan metode *active recall* bisa kamu lihat di [sini](https://www.youtube.com/watch?v=btLPgWxKISM). Cek [tautan ini](https://www.youtube.com/watch?v=fDbxPVn02VU) juga kalau kamu mau belajar mengenai metode ini secara lebih mendalam.
+Contoh cara belajar  *programming*  dengan metode  *active recall*  bisa kamu lihat di [sini](https://www.youtube.com/watch?v=btLPgWxKISM). Cek [tautan ini](https://www.youtube.com/watch?v=fDbxPVn02VU) juga kalau kamu mau belajar mengenai metode ini secara lebih mendalam.
 
 Kamu juga belajar secara aktif ketika kamu berinisiatif mencaritahu hal-hal yang tidak kamu pahami seiring dengan pengerjaan soal.
 
 Kamu harus terbiasa menyusun algoritma atau langkah-langkah pengerjaan sendiri, dan proses penyusunan algoritma ini lah yang akan lebih awet bertahan di otakmu.
 
-Jika kamu sudah membuat langkah-langkah pemecahan masalah berdasarkan logikamu sendiri (bukan mengikuti logika orang lain), dan kodemu pun sudah diketik sendiri untuk menciptakan *muscle memory*, maka percaya deh, kalau materi-materi yang kamu pelajari akan lebih *nyantol* di otak.
+Jika kamu sudah membuat langkah-langkah pemecahan masalah berdasarkan logikamu sendiri (bukan mengikuti logika orang lain), dan kodemu pun sudah diketik sendiri untuk menciptakan  *muscle memory*,  maka percaya deh, kalau materi-materi yang kamu pelajari akan lebih *nyantol* di otak.
 
 ## **Bertanya (bisa ke orang lain maupun ke benda mati)**
 

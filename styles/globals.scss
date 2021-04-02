@@ -7,7 +7,7 @@
 .cms-content {
   @apply text-gray-700;
 
-  & :first-child {
+  & >:first-child {
     @apply mt-10;
   }
 

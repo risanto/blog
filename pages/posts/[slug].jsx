@@ -4,6 +4,7 @@ import Layout from '../../components/Layout'
 
 export default function Post(props) {
     const { postData } = props
+    console.log(postData.contentHtml)
 
     function formatImgSrc(thumbnail) {
         return thumbnail.includes('http')
@@ -26,8 +27,8 @@ export default function Post(props) {
                     />
                     <div className={"py-2"}>
                         <ul className={"float-right"}>
-                            {postData.tags.map(tag => {
-                                return <li>#{tag.name}</li>
+                            {postData.tags.map((tag, idx) => {
+                                return <li key={idx}>#{tag.name}</li>
                             })}
                         </ul>
                     </div>
