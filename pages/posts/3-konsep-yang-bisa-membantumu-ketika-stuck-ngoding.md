@@ -11,7 +11,7 @@ Otak yang macet dan program yang  *error*  adalah makanan sehari-hari ketika b
 
 ## **Belajar tidak harus selalu fokus**
 
-Mungkin kamu familiar dengan  **mode** **fokus**  ketika belajar, dimana di mode ini kamu memaksimalkan perhatianmu pada satu hal saja dan meminimalisir distraksi.
+Mungkin kamu familiar dengan **mode** **fokus** ketika belajar, dimana di mode ini kamu memaksimalkan perhatianmu pada satu hal saja dan meminimalisir distraksi.
 
 Banyak anggapan kalau mode fokus ini adalah satu-satunya mode untuk belajar. Padahal seringkali, jika terlalu fokus, kamu malah bisa *stuck* ketika menghadapi suatu permasalahan.
 

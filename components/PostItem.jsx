@@ -6,15 +6,19 @@ export default function PostItem({ post }) {
     date = date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
 
     return (
-        <>
+        <div className={"hover:border rounded"}>
             <Link href={"/posts/" + post.data.slug}>
                 <a>
                     <img src={post.data.thumbnail} />
-                    <h2>{post.data.title}</h2>
-                    <p>{date}</p>
+                    <div className={"px-2"}>
+                        <h2
+                            className={"font-bold text-xl mt-2"}
+                        >{post.data.title}</h2>
+                        <p>{date}</p>
+                    </div>
                 </a>
             </Link>
-            <ul className={"flex justify-end"}>
+            <ul className={"flex justify-end p-2"}>
                 {post.data.tags.map((tag, idx) => {
                     return <li
                         key={idx}
@@ -23,6 +27,6 @@ export default function PostItem({ post }) {
                     </li>
                 })}
             </ul>
-        </>
+        </div>
     )
 }

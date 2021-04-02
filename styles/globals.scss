@@ -4,8 +4,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro&display=swap');
 
+.dark {
+  @apply text-gray-300;
+
+  .highlighted-link {
+    @apply text-gray-600;
+  }
+
+  h1, h2, h3 {
+    @apply text-white;
+  }
+}
+
 .cms-content {
-  @apply text-gray-700;
+  .light & {
+    @apply text-gray-700;
+  }
 
   & :after { // add space after nbsp
     content: " "; display: inline-block; width: 0; 
@@ -15,49 +29,61 @@
     @apply mt-10;
   }
 
-  & p {
+  p {
     @apply mt-6;
     font-family: 'Libre Baskerville', serif;
   }
 
-  & h2, h3 {
-    @apply mt-12 text-black;
+  h2, h3 {
+    @apply mt-12;
   }
 
-  & h2 {
+  h2 {
     @apply text-2xl;
   }
 
-  & h3 {
+  h3 {
     @apply text-xl;
   }
 
-  & h6 {
-    @apply text-sm text-gray-500 text-center;
+  h6 {
+    @apply text-sm text-center;
+
+    .light & {
+      @apply text-gray-500;
+    }
   }
 
-  & ul, ol {
+  ul, ol {
     @apply list-outside ml-6;
     font-family: 'Libre Baskerville', serif;
   }
 
-  & ul {
+  ul {
     @apply list-disc;
   }
 
-  & ol {
+  ol {
     @apply list-decimal;
   }
 
-  & li {
+  li {
     @apply mt-2;
   }
 
-  & a {
+  a {
     @apply bg-blue-50;
+
+    .dark & {
+      @apply text-gray-500;
+    }
   }
 
-  & a:hover {
+  a:hover {
     @apply bg-blue-100;
+
+    .dark & {
+      @apply text-gray-500;
+    }
   }
 }

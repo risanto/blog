@@ -5,7 +5,7 @@ export default function Nav() {
     const { theme, setTheme } = useTheme()
 
     return (
-        <nav className={"flex py-2 px-4 justify-between sticky top-0 bg-white dark:bg-black"}>
+        <nav className={"flex py-4 px-4 justify-between sticky top-0 bg-white dark:bg-black max-w-screen-md mx-auto"}>
             <ul className={"flex"}>
                 <li>
                     <Link href="/">

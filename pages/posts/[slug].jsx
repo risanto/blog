@@ -18,8 +18,8 @@ export default function Post(props) {
         <Layout>
             <article>
                 <header>
-                    <h1 className={"font-bold text-4xl"}>{postData.title}</h1>
-                    <p className={"text-gray-700 mt-4"}>{postData.author.name} / {date}
+                    <h1 className={"font-bold text-4xl dark:text-white"}>{postData.title}</h1>
+                    <p className={"text-gray-700 dark:text-gray-400 mt-4"}>{postData.author.name} / {date}
                     </p>
                     <img
                         className={"mt-4"}
