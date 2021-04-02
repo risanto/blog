@@ -18,13 +18,13 @@ export default function Post(props) {
             <article className={"px-4 pt-4 pb-16 max-w-screen-md mx-auto"}>
                 <header>
                     <h1 className={"font-bold text-4xl"}>{postData.title}</h1>
-                    <p className={"text-gray-700"}>{postData.author.name} / {date}
+                    <p className={"text-gray-700 mt-4"}>{postData.author.name} / {date}
                     </p>
                     <img
                         className={"mt-4"}
                         src={formatImgSrc(postData.thumbnail)}
                     />
-                    <div className={"py-2"}>
+                    <div className={"py-4"}>
                         <ul className={"float-right"}>
                             {postData.tags.map((tag, idx) => {
                                 return <li key={idx}>#{tag.name}</li>
