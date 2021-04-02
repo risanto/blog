@@ -9,8 +9,6 @@ thumbnail: https://miro.medium.com/max/875/1*HXKAKuaydw8sxLJRh3sp7g.png
 ---
 Otak yang macet dan program yang  *error*  adalah makanan sehari-hari ketika baru belajar  *programming.* Tiga konsep di bawah ini mungkin bisa membantumu mengatasi permasalahan ini.
 
-...
-
 ## **Belajar tidak harus selalu fokus**
 
 Mungkin kamu familiar dengan  **mode** **fokus**  ketika belajar, dimana di mode ini kamu memaksimalkan perhatianmu pada satu hal saja dan meminimalisir distraksi.
