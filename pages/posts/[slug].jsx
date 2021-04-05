@@ -1,7 +1,7 @@
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 import Layout from '../../components/Layout'
-import TagItem from '../../components/TagItem'
+import TagList from '../../components/TagList'
 
 export default function Post(props) {
     const { postData } = props
@@ -25,14 +25,8 @@ export default function Post(props) {
                         className={"mt-4"}
                         src={formatImgSrc(postData.thumbnail)}
                     />
-                    <div className={"pt-2"}>
-                        <ul className={"relative -top-4 -right-1 flex justify-end"}>
-                            {postData.tags.map((tag, idx) => {
-                                return <li key={idx}>
-                                    <TagItem tag={tag} />
-                                </li>
-                            })}
-                        </ul>
+                    <div className={"pt-2 relative -top-4 -right-1"}>
+                        <TagList tags={postData.tags} rowReverse={true} withBackground={true}/>
                     </div>
                 </header>
                 <main

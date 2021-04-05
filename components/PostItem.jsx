@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import TagItem from './TagItem'
+import TagList from './TagList'
 
 export default function PostItem({ post }) {
     let date = new Date(post.data.date)
@@ -17,21 +17,15 @@ export default function PostItem({ post }) {
                         <h2
                             className={"font-medium text-xl mt-2"}
                         >{post.data.title}</h2>
-                        <p className={"text-sm"}
+                        <p className={"text-sm text-gray-500"}
                         >{date}</p>
-                        <p>{post.description}</p>
                     </div>
                 </a>
             </Link>
-            <ul className={"absolute -top-6 right-0 flex justify-end p-2"}>
-                {post.data.tags.map((tag, idx) => {
-                    return <li
-                        key={idx}
-                    >
-                        <TagItem tag={tag} />
-                    </li>
-                })}
-            </ul>
+            {/* <div className={"overflow-x-auto w-full absolute -top-6"}> */}
+            <div className={"w-full absolute -top-6 right-0 p-2"}>
+                <TagList tags={post.data.tags} rowReverse={true} withBackground={true}/>
+            </div>
         </div>
     )
 }
