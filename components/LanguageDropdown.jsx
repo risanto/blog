@@ -25,8 +25,8 @@ export default function LanguageDropdown({ color }) {
         : (bgColor = "bg-" + color + "-500");
     return (
         <>
-            <div className="flex flex-wrap mr-6 sm:mr-1">
-                <div className="relative inline-flex w-full align-middle">
+            <div className="flex mr-6 sm:mr-1">
+                <div className="relative inline-flex align-middle">
                     <button
                         className={"flex"}
                         type="button"

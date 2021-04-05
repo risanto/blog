@@ -23,7 +23,7 @@
 
   p {
     @apply mt-6;
-    font-family: 'Libre Baskerville', serif;
+    // font-family: 'Libre Baskerville', serif;
   }
 
   h2, h3 {
@@ -48,7 +48,7 @@
 
   ul, ol {
     @apply list-outside ml-6;
-    font-family: 'Libre Baskerville', serif;
+    // font-family: 'Libre Baskerville', serif;
   }
 
   ul {
@@ -67,7 +67,7 @@
     @apply bg-blue-50 px-1;
 
     .dark & {
-      @apply bg-purple-900;
+      @apply text-gray-700;
     }
   }
 
@@ -75,7 +75,7 @@
     @apply bg-blue-100;
 
     .dark & {
-      @apply bg-purple-800;
+      @apply text-gray-700;
     }
   }
 }
