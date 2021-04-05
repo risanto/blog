@@ -2,7 +2,7 @@ import Head from "next/head"
 
 import Layout from '../components/Layout'
 import PostItem from '../components/PostItem'
-import TagItem from '../components/TagItem'
+import LanguageDropdown from '../components/LanguageDropdown'
 import TagList from '../components/TagList'
 
 import { fetchAllPostContent } from '../lib/posts'
@@ -19,18 +19,26 @@ export default function Index({ posts, languages, tags }) {
             </Head>
             <Layout>
                 <main>
+                    {/* Languages & tags */}
                     <section className={"flex"}>
-                        <ul>
+                        <LanguageDropdown />
+                        {/* <ul>
                             <li key={"all"}>All</li>
                             {languages.map((language) => {
                                 return <li key={language.slug}>
                                     {language.slug}
                                 </li>
                             })}
-                        </ul>
+                        </ul> */}
+                        <img
+                            className={"bg-indigo-50 rounded-l p-1"}
+                            src="/img/tag.svg" height={25} width={25}
+                        />
                         <TagList tags={tags} />
                     </section>
-                    <section>
+
+                    {/* Posts */}
+                    <section className={"mt-16"}>
                         <ul>
                             {posts.map((post, idx) => {
                                 return <li
