@@ -25,8 +25,8 @@ export default function Post(props) {
                         className={"mt-4"}
                         src={formatImgSrc(postData.thumbnail)}
                     />
-                    <div className={"pt-2 text-gray-600"}>
-                        <ul className={"flex justify-end"}>
+                    <div className={"pt-2"}>
+                        <ul className={"relative -top-4 -right-1 flex justify-end"}>
                             {postData.tags.map((tag, idx) => {
                                 return <li key={idx}>
                                     <TagItem tag={tag} />

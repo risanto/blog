@@ -25,9 +25,12 @@ export default function Index({ posts, languages, tags }) {
                                 </li>
                             })}
                         </ul>
-                        <ul className={"flex ml-2"}>
+                        <ul className={"flex"}>
                             {tags.map((tag, idx) => {
-                                return <li key={idx}>
+                                return <li
+                                    key={idx}
+                                    className={"ml-2"}
+                                >
                                     <TagItem tag={tag} />
                                 </li>
                             })}

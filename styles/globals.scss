@@ -7,10 +7,6 @@
 .dark {
   @apply text-gray-200;
 
-  .highlighted-link {
-    @apply text-gray-600;
-  }
-
   h1, h2, h3 {
     @apply text-white;
   }
@@ -23,10 +19,6 @@
 
   & :after { // add space after nbsp
     content: " "; display: inline-block; width: 0; 
-  }
-
-  & >:first-child {
-    @apply mt-10;
   }
 
   p {
@@ -75,7 +67,7 @@
     @apply bg-blue-50 px-1;
 
     .dark & {
-      @apply text-gray-500;
+      @apply bg-indigo-900;
     }
   }
 
@@ -83,7 +75,7 @@
     @apply bg-blue-100;
 
     .dark & {
-      @apply text-gray-500;
+      @apply bg-indigo-800;
     }
   }
 }
