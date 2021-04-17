@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { createPopper } from '@popperjs/core'
-
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import useComponentVisible from '../hooks/useComponentVisible'
+import useRedirect from '../hooks/useRedirect'
 
 export default function LanguageDropdown({ languages }) {
     const [activeLanguage, setActiveLanguage] = useState({ slug: 'all', name: 'All' })
 
     const router = useRouter()
+    const redirect = useRedirect()
+    
     const { ref, btnRef, isComponentVisible, setIsComponentVisible } = useComponentVisible(false) // starts invisible
 
     const btnDropdownRef = btnRef // the component that influences popover dropdown's appearance
@@ -65,7 +66,7 @@ export default function LanguageDropdown({ languages }) {
                         {isComponentVisible && (
                             <div
                                 className={
-                                    "bg-white text-base pl-2 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+                                    "bg-white text-base float-left py-2 list-none text-left rounded shadow-lg mt-1"
                                 }
                                 style={{ minWidth: "6rem" }}
                             >
@@ -73,14 +74,16 @@ export default function LanguageDropdown({ languages }) {
                                     {languages.length && languages.map((language) => {
                                         if (language.name !== activeLanguage.name) {
                                             return <li key={language.slug}>
-                                                <Link
-                                                    href={`/?language=${language.slug}`}
+                                                <a
+                                                    onClick={() => {
+                                                        redirect('/', { language: [language.slug] })
+                                                    }}
                                                     className={
                                                         "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap"
                                                     }
                                                 >
                                                     {language.name}
-                                                </Link>
+                                                </a>
                                             </li>
                                         }
 
