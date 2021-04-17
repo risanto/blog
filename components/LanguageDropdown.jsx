@@ -79,7 +79,7 @@ export default function LanguageDropdown({ languages }) {
                                                         redirect('/', { language: [language.slug] })
                                                     }}
                                                     className={
-                                                        "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap"
+                                                        "hover:cursor-pointer hover:underline text-sm py-2 px-4 font-normal block w-full whitespace-nowrap"
                                                     }
                                                 >
                                                     {language.name}
