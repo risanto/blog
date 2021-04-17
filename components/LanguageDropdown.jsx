@@ -1,28 +1,42 @@
-import React from "react";
-import { createPopper } from "@popperjs/core";
+import React, { useEffect, useState } from 'react'
+import { createPopper } from '@popperjs/core'
 
-export default function LanguageDropdown({ color }) {
-    if (!color) color = 'white'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-    // dropdown props
-    const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
-    const btnDropdownRef = React.createRef();
-    const popoverDropdownRef = React.createRef();
-    const openDropdownPopover = () => {
-        createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
-            placement: "bottom-start"
-        });
-        setDropdownPopoverShow(true);
-    };
-    const closeDropdownPopover = () => {
-        setDropdownPopoverShow(false);
-    };
+import useComponentVisible from '../hooks/useComponentVisible'
 
-    // bg colors
-    let bgColor;
-    color === "white"
-        ? (bgColor = "bg-blueGray-700")
-        : (bgColor = "bg-" + color + "-500");
+export default function LanguageDropdown({ languages }) {
+    const [activeLanguageName, setActiveLanguageName] = useState('All')
+
+    const router = useRouter()
+    const { ref, btnRef, isComponentVisible, setIsComponentVisible } = useComponentVisible(false) // starts invisible
+    console.log(router)
+
+    const btnDropdownRef = btnRef // the component that influences popover dropdown's appearance
+    const popoverDropdownRef = ref // the component that'll appear/disappear
+
+    // close popover & set active language whenever language is changed
+    useEffect(() => {
+        if (router.query.language) {
+            setActiveLanguageName(router.query.language)
+        }
+
+        setIsComponentVisible(false)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [router.query.language])
+
+    useEffect(() => {
+        // place the popover dropdown belows the button whenever it's visible
+        if (isComponentVisible) {
+            createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
+                placement: "bottom-start"
+            })
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isComponentVisible])
+
     return (
         <>
             <div className="flex mr-6 sm:mr-1">
@@ -31,11 +45,6 @@ export default function LanguageDropdown({ color }) {
                         className={"flex"}
                         type="button"
                         ref={btnDropdownRef}
-                        onClick={() => {
-                            dropdownPopoverShow
-                                ? closeDropdownPopover()
-                                : openDropdownPopover();
-                        }}
                     >
                         <img
                             className={"place-self-center bg-indigo-50 p-1 rounded-l"}
@@ -43,59 +52,37 @@ export default function LanguageDropdown({ color }) {
                             width={25} height={25}
                         />
                         <p className={"place-self-center mx-1 px-1 hover:underline"}>
-                            All
+                            {activeLanguageName}▼
                         </p>
                     </button>
-                    <div
-                        ref={popoverDropdownRef}
-                        className={
-                            (dropdownPopoverShow ? "block " : "hidden ") +
-                            (color === "white" ? "bg-white " : bgColor + " ") +
-                            "text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
-                        }
-                        style={{ minWidth: "12rem" }}
-                    >
-                        <a
-                            href="#pablo"
-                            className={
-                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
-                                (color === "white" ? " text-blueGray-700" : "text-white")
-                            }
-                            onClick={e => e.preventDefault()}
-                        >
-                            Action
-              </a>
-                        <a
-                            href="#pablo"
-                            className={
-                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
-                                (color === "white" ? " text-blueGray-700" : "text-white")
-                            }
-                            onClick={e => e.preventDefault()}
-                        >
-                            Another action
-              </a>
-                        <a
-                            href="#pablo"
-                            className={
-                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
-                                (color === "white" ? " text-blueGray-700" : "text-white")
-                            }
-                            onClick={e => e.preventDefault()}
-                        >
-                            Something else here
-              </a>
-                        <div className="h-0 my-2 border border-t-0 border-solid opacity-25 border-blueGray-800" />
-                        <a
-                            href="#pablo"
-                            className={
-                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
-                                (color === "white" ? " text-blueGray-700" : "text-white")
-                            }
-                            onClick={e => e.preventDefault()}
-                        >
-                            Seprated link
-              </a>
+                    <div ref={popoverDropdownRef}>
+                        {isComponentVisible && (
+                            <div
+                                className={
+                                    "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+                                }
+                                style={{ minWidth: "12rem" }}
+                            >
+                                <ul>
+                                    {languages.length && languages.map((language) => {
+                                        if (language.name !== activeLanguageName) {
+                                            return <li key={language.slug}>
+                                                <Link
+                                                    href={`/?language=${language.name}`}
+                                                    className={
+                                                        "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap"
+                                                    }
+                                                >
+                                                    {language.name}
+                                                </Link>
+                                            </li>
+                                        }
+
+                                        return <li key={playlist.id}></li>
+                                    })}
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

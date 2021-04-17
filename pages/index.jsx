@@ -21,7 +21,7 @@ export default function Index({ posts, languages, tags }) {
                 <main>
                     {/* Languages & tags */}
                     <section className={"flex"}>
-                        <LanguageDropdown />
+                        <LanguageDropdown languages={languages}/>
                         {/* <ul>
                             <li key={"all"}>All</li>
                             {languages.map((language) => {
