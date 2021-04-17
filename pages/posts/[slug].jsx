@@ -15,7 +15,7 @@ export default function Post(props) {
     date = date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
 
     return (
-        <Layout>
+        <Layout pageTitle={postData.title}>
             <article>
                 <header>
                     <h1 className={"font-bold text-4xl dark:text-white"}>{postData.title}</h1>
