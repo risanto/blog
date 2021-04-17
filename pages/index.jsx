@@ -35,8 +35,14 @@ export default function Index({ posts, languages, tags }) {
             </Head>
             <Layout>
                 <main>
-                    {/* Languages & tags section */}
-                    <section className={"flex"}>
+                    <section className={"mt-4"}>
+                        <h1 className={"text-xl bg-indigo-50 inline-block text-gray-700 pr-1"}
+                        >Hello, I'm Risan :)</h1>
+
+                        <p className={"mt-2"}>I'm a full stack developer who likes to write about programming and personal development. I just recently started this blog so expect more contents to come!</p>
+                    </section>
+
+                    <section className={"flex mt-6"}>
 
                         {/* Languages */}
                         <LanguageDropdown languages={languages} />
@@ -50,7 +56,7 @@ export default function Index({ posts, languages, tags }) {
                     </section>
 
                     {/* Posts */}
-                    <section className={"mt-16"}>
+                    <section className={"mt-10"}>
                         {!!posts.length && (
                             <ul>
                                 {posts.map((post, idx) => {

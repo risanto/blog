@@ -5,12 +5,12 @@ export default function Nav() {
     const { theme, setTheme } = useTheme()
 
     return (
-        <nav className={"z-10 flex py-4 px-2 justify-between sticky top-0 bg-white dark:bg-gradient-to-r dark:bg-black max-w-screen-md mx-auto"}>
+        <nav className={"z-10 flex py-4 justify-between sticky top-0 bg-white dark:bg-gradient-to-r dark:bg-black max-w-screen-md mx-auto"}>
             <ul className={"flex"}>
                 <li>
                     <Link href="/">
                         <a
-                            className={"hover:underline p-1"}
+                            className={"hover:underline"}
                         >Home</a>
                     </Link>
                 </li>
