@@ -37,7 +37,6 @@ export default function Index({ posts, languages, tags }) {
                 </section>
 
                 <section className={"flex mt-6"}>
-
                     {/* Languages */}
                     <LanguageDropdown languages={languages} />
 
