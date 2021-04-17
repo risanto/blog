@@ -28,47 +28,45 @@ export default function Index({ posts, languages, tags }) {
 
     return (
         <Layout pageTitle={"Risan's Blog"}>
-            <main>
-                <section className={"mt-4"}>
-                    <h1 className={"text-xl bg-indigo-50 inline-block text-gray-700 pr-1"}
-                    >Hello, I'm Risan :)</h1>
+            <section className={"mt-4"}>
+                <h1 className={"text-xl bg-indigo-50 inline-block text-gray-700 pr-1"}
+                >Hello, I'm Risan :)</h1>
 
-                    <p className={"mt-2"}>I'm a full stack developer who likes to write about programming and personal development. I just recently started this blog so expect more contents to come!</p>
-                </section>
+                <p className={"mt-2"}>I'm a full stack developer who likes to write about programming and personal development. I just recently started this blog so expect more contents to come!</p>
+            </section>
 
-                <section className={"flex mt-6"}>
-                    {/* Languages */}
-                    <LanguageDropdown languages={languages} />
+            <section className={"flex mt-6"}>
+                {/* Languages */}
+                <LanguageDropdown languages={languages} />
 
-                    {/* Tags */}
-                    <img
-                        className={"bg-indigo-50 rounded-l p-1"}
-                        src="/img/tag.svg" height={25} width={25}
-                    />
-                    <TagList tags={tags} />
-                </section>
+                {/* Tags */}
+                <img
+                    className={"bg-indigo-50 rounded-l p-1"}
+                    src="/img/tag.svg" height={25} width={25}
+                />
+                <TagList tags={tags} />
+            </section>
 
-                {/* Posts */}
-                <section className={"mt-10"}>
-                    {!!posts.length && (
-                        <ul>
-                            {posts.map((post, idx) => {
-                                return <li
-                                    className={"mt-8"}
-                                    key={idx}
-                                >
-                                    <PostItem post={post} />
-                                </li>
-                            })}
-                        </ul>
-                    )}
+            {/* Posts */}
+            <section className={"mt-10"}>
+                {!!posts.length && (
+                    <ul>
+                        {posts.map((post, idx) => {
+                            return <li
+                                className={"mt-8"}
+                                key={idx}
+                            >
+                                <PostItem post={post} />
+                            </li>
+                        })}
+                    </ul>
+                )}
 
-                    {!posts.length && (
-                        <p className={"text-center"}
-                        >No posts found.</p>
-                    )}
-                </section>
-            </main>
+                {!posts.length && (
+                    <p className={"text-center"}
+                    >No posts found.</p>
+                )}
+            </section>
         </Layout>
     )
 }

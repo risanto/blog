@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['Source Sans Pro', 'ui-sans-serif', 'system-ui']
+      },
+      screens: {
+        sm: '500px'
       }
     },
   },

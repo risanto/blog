@@ -1,4 +1,5 @@
 import Nav from './Nav'
+import Footer from './Footer'
 import Head from "next/head"
 
 export default function Layout({ pageTitle, children }) {
@@ -7,9 +8,12 @@ export default function Layout({ pageTitle, children }) {
             <Head>
                 <title>{pageTitle}</title>
             </Head>
-            <div className={"px-8 md:px-16 pt-4 pb-16 max-w-screen-md mx-auto"}>
+            <div className={"px-8 sm:px-16 pt-4 max-w-screen-md mx-auto flex flex-col h-screen"}>
                 <Nav />
-                {children}
+                <main className={"mb-auto"}>
+                    {children}
+                </main>
+                <Footer />
             </div>
         </>
     )

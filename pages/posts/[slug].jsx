@@ -17,30 +17,28 @@ export default function Post(props) {
 
     return (
         <Layout pageTitle={postData.title}>
-            <article>
-                <header>
-                    <h1 className={"font-bold text-4xl dark:text-white"}>{postData.title}</h1>
+            <header>
+                <h1 className={"font-bold text-4xl dark:text-white"}>{postData.title}</h1>
 
-                    <div className={"mt-4 flex justify-between"}>
-                        <p className={"text-gray-700 dark:text-gray-400"}>{postData.author.name} / {date}
-                        </p>
-                        <p className={"text-gray-700 dark:text-gray-400"}>{postData.readingTime.text}</p>
-                    </div>
+                <div className={"mt-4 flex justify-between"}>
+                    <p className={"text-gray-700 dark:text-gray-400"}>{postData.author.name} / {date}
+                    </p>
+                    <p className={"text-gray-700 dark:text-gray-400"}>{postData.readingTime.text}</p>
+                </div>
 
-                    <img
-                        className={"mt-4"}
-                        src={formatImgSrc(postData.thumbnail)}
-                    />
-                    <div className={"pt-2 relative -top-4 -right-1"}>
-                        <TagList tags={postData.tags} rowReverse={true} withBackground={true} />
-                    </div>
-                </header>
-                <main
-                    className={"cms-content"}
-                    dangerouslySetInnerHTML={
-                        { __html: postData.contentHtml }
-                    }>
-                </main>
+                <img
+                    className={"mt-4"}
+                    src={formatImgSrc(postData.thumbnail)}
+                />
+                <div className={"pt-2 relative -top-4 -right-1"}>
+                    <TagList tags={postData.tags} rowReverse={true} withBackground={true} />
+                </div>
+            </header>
+            <article
+                className={"cms-content"}
+                dangerouslySetInnerHTML={
+                    { __html: postData.contentHtml }
+                }>
             </article>
         </Layout>
     )
