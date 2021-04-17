@@ -10,7 +10,7 @@ export default function Nav() {
                 <li>
                     <Link href="/">
                         <a
-                        className={"hover:underline p-1"}
+                            className={"hover:underline p-1"}
                         >Home</a>
                     </Link>
                 </li>
@@ -23,6 +23,7 @@ export default function Nav() {
             <button
                 aria-label="Toggle Dark Mode"
                 type="button"
+                suppressHydrationWarning={true}
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
                 {theme === 'dark' && (
