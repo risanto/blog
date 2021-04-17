@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import useRedirect from '../hooks/useRedirect'
 
 export default function TagItem({ tag, withBackground }) {
