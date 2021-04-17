@@ -1,17 +1,16 @@
 import Link from 'next/link'
+import useRedirect from '../hooks/useRedirect'
 
 export default function TagItem({ tag, withBackground }) {
-    // dark:hover:bg-purple-800
-    // dark:bg-purple-900
+    const redirect = useRedirect()
+
     return <div
-        className={"place-self-center whitespace-nowrap px-2 " + ( withBackground ? "bg-indigo-50 hover:bg-indigo-100 dark:text-gray-700" : "hover:underline")}
+        className={"place-self-center whitespace-nowrap px-2 " + (withBackground ? "bg-indigo-50 hover:bg-indigo-100 dark:text-gray-700" : "hover:underline")}
     >
-        <Link
-        href={"/?tag=" + tag.slug}
+        <a
+            onClick={() => redirect('/', { tag: tag.slug })}
         >
-            <a>
-                #{tag.name}
-            </a>
-        </Link>
+            #{tag.name}
+        </a>
     </div>
 }
