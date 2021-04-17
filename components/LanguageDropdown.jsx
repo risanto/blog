@@ -7,11 +7,10 @@ import { useRouter } from 'next/router'
 import useComponentVisible from '../hooks/useComponentVisible'
 
 export default function LanguageDropdown({ languages }) {
-    const [activeLanguageName, setActiveLanguageName] = useState('All')
+    const [activeLanguage, setActiveLanguage] = useState({ slug: 'all', name: 'All' })
 
     const router = useRouter()
     const { ref, btnRef, isComponentVisible, setIsComponentVisible } = useComponentVisible(false) // starts invisible
-    console.log(router)
 
     const btnDropdownRef = btnRef // the component that influences popover dropdown's appearance
     const popoverDropdownRef = ref // the component that'll appear/disappear
@@ -19,7 +18,11 @@ export default function LanguageDropdown({ languages }) {
     // close popover & set active language whenever language is changed
     useEffect(() => {
         if (router.query.language) {
-            setActiveLanguageName(router.query.language)
+            const language = languages.find(language => {
+                return language.slug === router.query.language
+            })
+
+            setActiveLanguage(language)
         }
 
         setIsComponentVisible(false)
@@ -52,23 +55,26 @@ export default function LanguageDropdown({ languages }) {
                             width={25} height={25}
                         />
                         <p className={"place-self-center mx-1 px-1 hover:underline"}>
-                            {activeLanguageName}▼
+                            {activeLanguage.name}▼
                         </p>
                     </button>
-                    <div ref={popoverDropdownRef}>
+                    <div
+                        ref={popoverDropdownRef}
+                        style={{ zIndex: 10 }}
+                    >
                         {isComponentVisible && (
                             <div
                                 className={
-                                    "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+                                    "bg-white text-base pl-2 float-left py-2 list-none text-left rounded shadow-lg mt-1"
                                 }
-                                style={{ minWidth: "12rem" }}
+                                style={{ minWidth: "6rem" }}
                             >
                                 <ul>
                                     {languages.length && languages.map((language) => {
-                                        if (language.name !== activeLanguageName) {
+                                        if (language.name !== activeLanguage.name) {
                                             return <li key={language.slug}>
                                                 <Link
-                                                    href={`/?language=${language.name}`}
+                                                    href={`/?language=${language.slug}`}
                                                     className={
                                                         "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap"
                                                     }
@@ -78,7 +84,7 @@ export default function LanguageDropdown({ languages }) {
                                             </li>
                                         }
 
-                                        return <li key={playlist.id}></li>
+                                        return <li key={language.slug}></li>
                                     })}
                                 </ul>
                             </div>

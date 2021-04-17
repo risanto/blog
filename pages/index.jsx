@@ -7,11 +7,8 @@ import TagList from '../components/TagList'
 
 import { fetchAllPostContent } from '../lib/posts'
 import { getAllLanguages, getAllTags } from '../lib/meta'
-import { useRouter } from 'next/router'
 
 export default function Index({ posts, languages, tags }) {
-    const { query } = useRouter()
-
     return (
         <>
             <Head>
@@ -21,7 +18,7 @@ export default function Index({ posts, languages, tags }) {
                 <main>
                     {/* Languages & tags */}
                     <section className={"flex"}>
-                        <LanguageDropdown languages={languages}/>
+                        <LanguageDropdown languages={languages} />
                         {/* <ul>
                             <li key={"all"}>All</li>
                             {languages.map((language) => {
@@ -58,8 +55,10 @@ export default function Index({ posts, languages, tags }) {
 
 export async function getStaticProps() {
     const posts = await fetchAllPostContent()
-    const languages = await getAllLanguages()
     const tags = await getAllTags()
+    let languages = await getAllLanguages()
+
+    languages.push({ slug: 'all', name: 'All' })
 
     return {
         props: {
