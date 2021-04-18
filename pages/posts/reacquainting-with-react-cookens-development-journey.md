@@ -96,13 +96,19 @@ After the search results were fetched I also needed to paginate them, and despit
 I wanted to make the arrow button left disappears on the first page and the arrow button right disappears on the last page. For the first page, I just added the class “invisible” to the arrow button left if the `currentPage` is 1 like this:
 
 ```
-
+<button 
+ className={"... " + (currentPage === 1 && "invisible")}
+ onClick={() => redirect(`/recipes/search/${page - 1}?q=${q}`)}
+>
 ```
 
 I also made a conditional class on the arrow button right like this:
 
 ```
-
+<button 
+ className={"... " + (currentPage === totalPages && "invisible")}
+ onClick={() => redirect(`/recipes/search/${page + 1}?q=${q}`)}
+>
 ```
 
 It looks straightforward and should just work as intended right? Except it didn’t. For a while, I struggled with the weird behaviour where the arrow button right just didn’t disappear on the last page. I checked the value of `page` and `totalPages` and they were exactly the same, so how come `currentPage === totalPages` weren’t equal to true?
@@ -110,7 +116,7 @@ It looks straightforward and should just work as intended right? Except it didn�
 Well, apparently it was a stupid mistake on my part where I set the currentPage initial value as an empty array.
 
 ```
-
+const [currentPage, setCurrentPage] = useState([])
 ```
 
 All I had to do was change the empty array to 1 or another number. 
@@ -174,27 +180,21 @@ I also used localStorage as the place to put the access token, despite it not be
 So, for some reason, I kept encountering a warning like this.
 
 ```
-
+Line 32:8:   React Hook useEffect has a missing dependency: 'generateNewRandomRecipes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 ```
 
 And it was because I didn’t put any dependency on my useEffect’s second argument and I just put an empty array there.
 
 ```
-
-```
-
-```
-
-```
-
-```
-
+useEffect(() => {
+   generateNewRandomRecipes()
+}, [])
 ```
 
 On the other hand, if I don’t pass any second argument or if I include generateNewRandomRecipes function as a dependency then it won’t stop getting fired. So, I looked it up on [StackOverflow](https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook), and apparently, the simplest solution is to just use the function as useEffect callback like this.
 
 ```
-
+useEffect(generateNewRandomRecipes, [])
 ```
 
 I could also memoise generateNewRandomRecipes function using useCallback but for this case, I just picked the simplest solution.
