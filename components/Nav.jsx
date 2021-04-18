@@ -32,7 +32,7 @@ export default function Nav() {
                         src={"/img/sun.svg"}
                     />
                 )}
-                {theme === 'light' && (
+                {theme === 'light' || !theme && (
                     <img
                         height={25} width={25}
                         src={"/img/moon.svg"}
