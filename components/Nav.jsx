@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes'
 
 export default function Nav() {
     const { theme, setTheme } = useTheme()
+    console.log(theme)
 
     return (
         <nav className={"w-full z-10 flex py-4 justify-between sticky top-0 bg-white dark:bg-gradient-to-r dark:bg-black max-w-screen-md mx-auto"}>
