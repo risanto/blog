@@ -89,14 +89,14 @@ Then I implemented the search feature but I encountered a problem where I couldn
 
 My SearchBar component now.
 
-The next thing after redirecting the user to the search results was to extract the query on the search page to fetch the recipes, and to do this I used `new URLSearchParams(props.location.search).get(<query>)`. I could also use `useLocation()` hook as described [here](https://reactrouter.com/web/example/query-parameters). They both basically do the same thing, but I was more inclined to use the hook if I couldn’t get`props.location` from the component.
+The next thing after redirecting the user to the search results was to extract the query on the search page to fetch the recipes, and to do this I used `new URLSearchParams(props.location.search).get(<query>)`. I could also use `useLocation()` hook as described [here](https://reactrouter.com/web/example/query-parameters). They both basically do the same thing, but I was more inclined to use the hook if I couldn’t get `props.location` from the component.
 
 After the search results were fetched I also needed to paginate them, and despite how easy pagination might’ve seemed it just wasn’t that simple, especially when you encounter a stupid mistake.
 
 I wanted to make the arrow button left disappears on the first page and the arrow button right disappears on the last page. For the first page, I just added the class “invisible” to the arrow button left if the `currentPage` is 1 like this:
 
-```
-<button 
+```jsx
+<button
  className={"... " + (currentPage === 1 && "invisible")}
  onClick={() => redirect(`/recipes/search/${page - 1}?q=${q}`)}
 >
@@ -104,7 +104,7 @@ I wanted to make the arrow button left disappears on the first page and the arro
 
 I also made a conditional class on the arrow button right like this:
 
-```
+```jsx
 <button 
  className={"... " + (currentPage === totalPages && "invisible")}
  onClick={() => redirect(`/recipes/search/${page + 1}?q=${q}`)}
@@ -115,7 +115,7 @@ It looks straightforward and should just work as intended right? Except it didn�
 
 Well, apparently it was a stupid mistake on my part where I set the currentPage initial value as an empty array.
 
-```
+```jsx
 const [currentPage, setCurrentPage] = useState([])
 ```
 
@@ -185,7 +185,7 @@ Line 32:8:   React Hook useEffect has a missing dependency: 'generateNewRandomRe
 
 And it was because I didn’t put any dependency on my useEffect’s second argument and I just put an empty array there.
 
-```
+```jsx
 useEffect(() => {
    generateNewRandomRecipes()
 }, [])
@@ -193,7 +193,7 @@ useEffect(() => {
 
 On the other hand, if I don’t pass any second argument or if I include generateNewRandomRecipes function as a dependency then it won’t stop getting fired. So, I looked it up on [StackOverflow](https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook), and apparently, the simplest solution is to just use the function as useEffect callback like this.
 
-```
+```jsx
 useEffect(generateNewRandomRecipes, [])
 ```
 

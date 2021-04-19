@@ -7,6 +7,10 @@
 .dark {
   @apply text-gray-300;
 
+  pre, code {
+    @apply text-gray-500
+  }
+
   h1, h2, h3 {
     @apply text-white;
   }
@@ -16,7 +20,7 @@
   @apply pb-10 break-words;
 
   pre {
-    @apply overflow-x-auto bg-gray-50 pt-4 px-4 mt-2;
+    @apply overflow-x-auto bg-gray-50 p-4 mt-2;
   }
 
   code {
