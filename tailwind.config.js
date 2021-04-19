@@ -9,6 +9,9 @@ module.exports = {
       },
       screens: {
         sm: '500px'
+      },
+      height: {
+        '90vh': '90vh'
       }
     },
   },

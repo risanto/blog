@@ -8,8 +8,10 @@ export default function Layout({ pageTitle, children }) {
             <Head>
                 <title>{pageTitle}</title>
             </Head>
-            <Nav />
-            <div className={"px-8 sm:px-16 pt-4 max-w-screen-md mx-auto flex flex-col h-screen mt-10"}>
+            <div className={"flex justify-center"}>
+                <Nav />
+            </div>
+            <div className={"px-8 sm:px-16 pt-4 max-w-screen-md mx-auto h-90vh flex flex-col mt-10"}>
                 <main className={"mb-auto"}>
                     {children}
                 </main>
