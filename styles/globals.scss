@@ -13,6 +13,12 @@
 }
 
 .cms-content {
+  @apply pb-10;
+  
+  pre {
+    @apply overflow-x-auto bg-gray-50 pt-8 px-4 mt-2;
+  }
+
   .light & {
     @apply text-gray-700;
   }
@@ -23,7 +29,6 @@
 
   p {
     @apply mt-6;
-    // font-family: 'Libre Baskerville', serif;
   }
 
   h2, h3 {
@@ -48,7 +53,6 @@
 
   ul, ol {
     @apply list-outside ml-6;
-    // font-family: 'Libre Baskerville', serif;
   }
 
   ul {
