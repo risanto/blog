@@ -8,8 +8,8 @@ export default function Layout({ pageTitle, children }) {
             <Head>
                 <title>{pageTitle}</title>
             </Head>
-            <div className={"px-8 sm:px-16 pt-4 max-w-screen-md mx-auto flex flex-col h-screen"}>
-                <Nav />
+            <Nav />
+            <div className={"px-8 sm:px-16 pt-4 max-w-screen-md mx-auto flex flex-col h-screen mt-10"}>
                 <main className={"mb-auto"}>
                     {children}
                 </main>

@@ -13,10 +13,14 @@
 }
 
 .cms-content {
-  @apply pb-10;
-  
+  @apply pb-10 break-words;
+
   pre {
-    @apply overflow-x-auto bg-gray-50 pt-8 px-4 mt-2;
+    @apply overflow-x-auto bg-gray-50 pt-4 px-4 mt-2;
+  }
+
+  code {
+    @apply bg-gray-50;
   }
 
   .light & {
