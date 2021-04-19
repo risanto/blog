@@ -11,7 +11,7 @@ export default function Nav() {
                     <Link href="/">
                         <a
                             className={"hover:underline"}
-                        >Home</a>
+                        >Blog</a>
                     </Link>
                 </li>
                 <li className={"hover:underline ml-4"}>

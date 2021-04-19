@@ -3,10 +3,12 @@ import Link from 'next/link'
 
 export default function About() {
     return (
-        <Layout pageTitle={"About | Risan's Blog"}>
-            <p className={"mt-4"}>A full stack developer who loves to learn and exercise both his analytical and creative muscles. Comfortable using <span className={"bg-indigo-50 dark:text-gray-500"}>Node.js, Express, PostgreSQL, Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-500"}>React, Next.js</span> on the frontend.</p>
+        <Layout pageTitle={"About Risan"}>
+            <p className={"mt-4"}>I'm Risan, a full stack developer who loves to learn and exercise both my analytical and creative muscles. I'm comfortable using <span className={"bg-indigo-50 dark:text-gray-500"}>Node.js / Express / PostgreSQL / Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-500"}>React / Next.js</span> on the frontend.</p>
 
-            <div className={"mt-4 flex"}>
+            <p className={"mt-4"}>I started this personal site to write about programming, personal development, and also showcase my personal projects.</p>
+
+            <div className={"mt-8 flex"}>
                 <Link href={"https://github.com/risanto"}>
                     <a target={"_blank"}>
                         <img
