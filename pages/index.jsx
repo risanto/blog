@@ -7,6 +7,7 @@ import { fetchAllPostContent } from '../lib/posts'
 import { getAllLanguages, getAllTags } from '../lib/meta'
 
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export default function Index({ posts, languages, tags }) {
     const router = useRouter()
@@ -44,6 +45,7 @@ export default function Index({ posts, languages, tags }) {
                     className={"bg-indigo-50 rounded-l p-1"}
                     src="/img/tag.svg" height={25} width={25}
                 />
+                <Link href={"/"}><a className={"mx-2 hover:underline"}>#all</a></Link>
                 <TagList tags={tags} />
             </section>
 
