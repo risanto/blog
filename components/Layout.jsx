@@ -16,7 +16,7 @@ export default function Layout({ children, pageTitle, description, previewImage,
 
                 {/* Open Graph */}
                 <meta property="og:url" content={router.pathname} key="ogurl" />
-                <meta property="og:image" content={previewImage ? previewImage : "img/r-logo.png"} key="ogimage" />
+                <meta property="og:image" content={previewImage ? previewImage : "/img/r-logo.png"} key="ogimage" />
                 <meta property="og:site_name" content={siteName} key="ogsitename" />
                 <meta property="og:title" content={pageTitle} key="ogtitle" />
                 <meta property="og:description" content={description} key="ogdesc" />
