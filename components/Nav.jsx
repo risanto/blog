@@ -23,7 +23,7 @@ export default function Nav() {
             <button
                 aria-label="Toggle Dark Mode"
                 type="button"
-                // suppressHydrationWarning={true}
+                suppressHydrationWarning={true}
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
                 {theme === 'dark' && (
