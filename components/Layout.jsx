@@ -22,7 +22,7 @@ export default function Layout({ children, pageTitle, description, previewImage,
                 <meta property="og:description" content={description} key="ogdesc" />
 
                 {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" key="twcard" />
+                <meta name="twitter:card" content="summary" key="twcard" />
                 
                 <link rel="icon" href={"img/r-logo.png"}
                     type="image/x-icon" />
