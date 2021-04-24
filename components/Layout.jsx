@@ -4,7 +4,10 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 export default function Layout({ children, pageTitle, description, previewImage, siteName }) {
+    const url = 'https://blogrisan.netlify.app'
     const router = useRouter()
+    const imageLink = `${url}${previewImage ? `/${previewImage}` : `/img/r-logo.png`}`
+
     return (
         <>
             <Head>
@@ -15,8 +18,8 @@ export default function Layout({ children, pageTitle, description, previewImage,
                 <meta name="description" content={description} />
 
                 {/* Open Graph */}
-                <meta property="og:url" content={`${process.env.DEPLOY_URL}/${router.pathname}`} key="ogurl" />
-                <meta property="og:image" content={process.env.DEPLOY_URL + previewImage ? `/${previewImage}` : `/img/r-logo.png`} key="ogimage" />
+                <meta property="og:url" content={`${url}${router.pathname}`} key="ogurl" />
+                <meta property="og:image" content={imageLink} key="ogimage" />
                 <meta property="og:site_name" content={siteName} key="ogsitename" />
                 <meta property="og:title" content={pageTitle} key="ogtitle" />
                 <meta property="og:description" content={description} key="ogdesc" />
