@@ -55,7 +55,7 @@ export default function LanguageDropdown({ languages }) {
                             src={"/img/language.svg"}
                             width={25} height={25}
                         />
-                        <p className={"place-self-center mx-1 px-1 hover:underline"}>
+                        <p className={"place-self-center mx-1 px-1 hover:underline h-7 leading-7"}>
                             {activeLanguage.name}▼
                         </p>
                     </button>
@@ -79,7 +79,7 @@ export default function LanguageDropdown({ languages }) {
                                                         redirect('/', { language: [language.slug] })
                                                     }}
                                                     className={
-                                                        "hover:cursor-pointer hover:underline text-sm py-2 px-4 font-normal block w-full whitespace-nowrap"
+                                                        "hover:cursor-pointer hover:underline text-sm py-2 px-4 font-normal block w-full whitespace-nowrap text-gray-700"
                                                     }
                                                 >
                                                     {language.name}
