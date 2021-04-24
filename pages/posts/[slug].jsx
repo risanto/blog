@@ -104,7 +104,7 @@ export default function Post(props) {
             </article>
             <button
                 id={"scrollToTopBtn"}
-                className={"h-8 w-8 fixed bottom-5 right-5 bg-white shadow rounded"}
+                className={"h-8 w-8 fixed bottom-5 left-5 bg-white shadow rounded"}
                 onClick={scrollToTop}
             >
                 <div
@@ -114,7 +114,7 @@ export default function Post(props) {
                 </div>
                 <img
                     id={"progressBar"}
-                    className={"fixed bottom-6 right-6"}
+                    className={"fixed bottom-6 left-6"}
                     src={"/img/arrow-up.svg"}
                 />
             </button>
