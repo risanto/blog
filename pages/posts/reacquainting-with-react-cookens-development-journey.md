@@ -8,8 +8,7 @@ tags:
 language: en
 thumbnail: img/cooken-react.png
 description: My process of relearning React while building a recipe app in 70+
-  hours. This post mostly serves as my personal documentation regarding issues
-  that I encounter during app development.
+  hours. This post mainly serves as my personal documentation.
 ---
 At my previous job, I’ve been mostly teaching JavaScript foundations and some very basic backend stuff that I haven’t touched the front-end side or created a full-stack application for quite some time.
 

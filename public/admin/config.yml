@@ -138,6 +138,7 @@ collections:
       - label: "Description"
         name: "description"
         widget: "text"
+        pattern: ['.{,160}', 'Maximum 160 characters']
         
       - label: "Body"
         name: "body"

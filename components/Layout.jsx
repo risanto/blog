@@ -7,7 +7,10 @@ import { useRouter } from 'next/router'
 export default function Layout({ children, pageTitle, description, previewImage, siteName }) {
     const { asPath } = useRouter()
     const url = 'https://blogrisan.netlify.app'
-    const imageLink = `${url}${previewImage ? `/${previewImage}` : `/img/r-logo.png`}`
+
+    const imageLink = previewImage.includes('http')
+        ? previewImage
+        : `${url}${previewImage ? `/${previewImage}` : `/img/r-logo.png`}`
 
     return (
         <>
@@ -27,7 +30,7 @@ export default function Layout({ children, pageTitle, description, previewImage,
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" key="twcard" />
-                
+
                 <link rel="icon" href={"img/r-logo.png"} type="image/x-icon" />
                 <title>{pageTitle}</title>
             </Head>
