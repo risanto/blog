@@ -22,22 +22,6 @@ export default function Post(props) {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
-    useEffect(() => {
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn")
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() }
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block"
-            } else {
-                scrollToTopBtn.style.display = "none"
-            }
-        }
-    }, [])
-
-
     const [scrollPosition, setScrollPosition] = useState(0)
 
     // Calculates the scroll distance
@@ -56,19 +40,39 @@ export default function Post(props) {
         setScrollPosition(Math.floor(scrollTop / totalDocScrollLength * 100))
     }
 
+    // Only show button when the scroll position is more than 0%
+    function setScrollToTopBtnDisplay() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn")
+    
+        if (scrollPosition > 0) {
+            scrollToTopBtn.style.display = "block"
+        } else {
+            scrollToTopBtn.style.display = "none"
+        }
+    }
+
     // Listen to page scroll
     function listenToScrollEvent() {
+        // Calculate scroll distance
         document.addEventListener("scroll", () => {
             requestAnimationFrame(() => {
                 calculateScrollDistance()
             })
         })
 
+        // Set scrollPosition as progress bar's height
         document.getElementById("progressBar").style.height = scrollPosition + "%"
     }
 
     useEffect(() => {
-        listenToScrollEvent()
+        let mounted = true
+
+        if (mounted) {
+            setScrollToTopBtnDisplay()
+            listenToScrollEvent()
+        }
+
+        return mounted = false
     }, [scrollPosition])
 
     return (
@@ -102,6 +106,7 @@ export default function Post(props) {
                 }>
             </article>
             <button
+                style={{ display: 'none' }}
                 id={"scrollToTopBtn"}
                 className={"h-8 w-8 fixed bottom-5 left-5 bg-white shadow rounded"}
                 onClick={scrollToTop}
