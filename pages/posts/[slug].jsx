@@ -5,7 +5,6 @@ import TagList from '../../components/TagList'
 
 export default function Post(props) {
     const { postData } = props
-    // console.log(postData)
 
     function formatImgSrc(thumbnail) {
         return thumbnail.includes('http')
@@ -16,7 +15,12 @@ export default function Post(props) {
     date = date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
 
     return (
-        <Layout pageTitle={postData.title}>
+        <Layout
+            pageTitle={postData.title}
+            description={postData.description}
+            previewImage={postData.thumbnail}
+            // siteName={}
+        >
             <header>
                 <h1 className={"font-bold text-4xl dark:text-white"}>{postData.title}</h1>
 

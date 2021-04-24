@@ -7,7 +7,6 @@ import { fetchAllPostContent } from '../lib/posts'
 import { getAllLanguages, getAllTags } from '../lib/meta'
 
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 export default function Index({ posts, languages, tags }) {
     const router = useRouter()
@@ -28,7 +27,12 @@ export default function Index({ posts, languages, tags }) {
     }
 
     return (
-        <Layout pageTitle={"Risan's Blog"}>
+        <Layout
+            pageTitle={"Risan's Blog"}
+            description={"Writings about programming and personal development."}
+            // previewImage={}
+            // siteName={}
+        >
             <section className={"mt-4"}>
                 <h1 className={"text-xl bg-indigo-50 inline-block text-gray-700 pr-1"}
                 >Hello, I'm Risan :)</h1>
