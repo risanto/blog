@@ -54,7 +54,6 @@ collections:
                 widget: "string"
                 hint: "Language name for displaying on the site"
 
-
       - name: "tags"
         label: "Tags"
         file: "meta/tags.yml"
@@ -135,6 +134,10 @@ collections:
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
         
       - label: "Body"
         name: "body"
