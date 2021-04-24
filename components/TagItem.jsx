@@ -1,15 +1,25 @@
 import useRedirect from '../hooks/useRedirect'
+import { useRouter } from 'next/router'
 
 export default function TagItem({ tag, withBackground }) {
     const redirect = useRedirect()
+    const router = useRouter()
+    const routerTag = router.query.tag
 
     return <div
-        className={"place-self-center whitespace-nowrap px-2 hover:cursor-pointer " + (withBackground ? "bg-indigo-50 hover:bg-indigo-100 dark:text-gray-700" : "hover:underline")}
+        className={"place-self-center whitespace-nowrap px-2 hover:cursor-pointer " + (withBackground ? "bg-indigo-50 hover:bg-indigo-100 dark:text-gray-700" : "hover:underline ") + ((routerTag === tag.slug || (tag.slug === 'all' && !routerTag)) && "border")}
     >
-        <a
-            onClick={() => redirect('/', { tag: tag.slug })}
-        >
-            #{tag.name}
-        </a>
-    </div>
+        {tag.slug === 'all' && (
+            <a
+                onClick={() => router.push('/')}
+            >#{tag.name}</a>
+        )}
+
+        {tag.slug !== 'all' && (
+            <a
+                onClick={() => redirect('/', { tag: tag.slug })}
+            >#{tag.name}</a>
+        )}
+
+    </div >
 }

@@ -45,7 +45,6 @@ export default function Index({ posts, languages, tags }) {
                     className={"bg-indigo-50 rounded-l p-1"}
                     src="/img/tag.svg" height={25} width={25}
                 />
-                <Link href={"/"}><a className={"mx-2 hover:underline"}>#all</a></Link>
                 <TagList tags={tags} />
             </section>
 
@@ -75,10 +74,11 @@ export default function Index({ posts, languages, tags }) {
 
 export async function getStaticProps() {
     const posts = await fetchAllPostContent()
-    const tags = await getAllTags()
+    let tags = await getAllTags()
     let languages = await getAllLanguages()
 
     languages.push({ slug: 'all', name: 'All' })
+    tags.unshift({ slug: 'all', name: 'all' })
 
     return {
         props: {
