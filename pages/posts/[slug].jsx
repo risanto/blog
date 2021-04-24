@@ -4,7 +4,7 @@ import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 import Layout from '../../components/Layout'
 import TagList from '../../components/TagList'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Post(props) {
     const { postData } = props
@@ -19,23 +19,58 @@ export default function Post(props) {
 
     // When the user clicks on the button, scroll to the top of the document
     function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'})
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     useEffect(() => {
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn")
 
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
+        window.onscroll = function () { scrollFunction() }
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
+                scrollToTopBtn.style.display = "block"
             } else {
-                scrollToTopBtn.style.display = "none";
+                scrollToTopBtn.style.display = "none"
             }
         }
     }, [])
+
+
+    const [scrollPosition, setScrollPosition] = useState(0)
+
+    // Calculates the scroll distance
+    function calculateScrollDistance() {
+        const scrollTop = window.pageYOffset
+        const windowHeight = window.innerHeight
+
+        const docHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        )
+
+        const totalDocScrollLength = docHeight - windowHeight
+
+        setScrollPosition(Math.floor(scrollTop / totalDocScrollLength * 100))
+    }
+
+    // Listen to page scroll
+    function listenToScrollEvent() {
+        document.addEventListener("scroll", () => {
+            requestAnimationFrame(() => {
+                calculateScrollDistance()
+            })
+        })
+
+        document.getElementById("progressBar").style.height = scrollPosition + "%"
+    }
+
+    useEffect(() => {
+        listenToScrollEvent()
+        console.log(scrollPosition)
+    }, [scrollPosition])
 
     return (
         <Layout
@@ -69,11 +104,17 @@ export default function Post(props) {
             </article>
             <button
                 id={"scrollToTopBtn"}
-                className={"fixed bottom-5 right-5"}
+                className={"h-8 w-8 fixed bottom-5 right-5 bg-white shadow rounded"}
                 onClick={scrollToTop}
             >
+                <div
+                    id={"progressBar"}
+                    className={"bg-indigo-50 absolute bottom-0 w-full rounded"}
+                >
+                </div>
                 <img
-                    className={"bg-indigo-50 rounded shadow p-1"}
+                    id={"progressBar"}
+                    className={"fixed bottom-6 right-6"}
                     src={"/img/arrow-up.svg"}
                 />
             </button>
