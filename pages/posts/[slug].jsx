@@ -109,7 +109,7 @@ export default function Post(props) {
             >
                 <div
                     id={"progressBar"}
-                    className={"bg-indigo-50 absolute bottom-0 w-full rounded"}
+                    className={"bg-indigo-100 absolute bottom-0 w-full rounded"}
                 >
                 </div>
                 <img
