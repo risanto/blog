@@ -6,6 +6,9 @@ tags:
   - learning-to-code
 language: id
 thumbnail: https://miro.medium.com/max/875/1*HXKAKuaydw8sxLJRh3sp7g.png
+description: "Konsep-konsep yang bisa membantu proses belajar programming (atau
+  belajar materi apa pun): mode fokus dan tersebar, belajar aktif dan pasif,
+  cara bertanya ketika stuck (ke orang lain maupun ke benda mati)."
 ---
 Otak yang macet dan program yang  *error*  adalah makanan sehari-hari ketika baru belajar  *programming.* Tiga konsep di bawah ini mungkin bisa membantumu mengatasi permasalahan ini.
 
