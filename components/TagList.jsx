@@ -20,7 +20,7 @@ export default function TagList({ tags, rowReverse, withBackground }) {
         }
     }, [routerTag])
 
-    return <ul className={"flex overflow-x-auto " + (rowReverse ? "flex-row-reverse" : "")}>
+    return <ul className={"ml-1 flex overflow-x-auto " + (rowReverse ? "flex-row-reverse" : "")}>
         {tags.map((tag, idx) => {
             return <li
                 id={"taglist-" + tag.slug}

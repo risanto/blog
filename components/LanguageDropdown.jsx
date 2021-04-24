@@ -68,7 +68,7 @@ export default function LanguageDropdown({ languages }) {
                                 className={
                                     "bg-white text-base float-left py-2 list-none text-left rounded shadow-lg mt-1"
                                 }
-                                style={{ minWidth: "6rem" }}
+                                style={{ minWidth: "7rem" }}
                             >
                                 <ul>
                                     {languages.length && languages.map((language) => {
