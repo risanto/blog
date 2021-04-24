@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro&display=swap');
 
 .dark {
-  @apply text-gray-300;
+  @apply text-gray-300 bg-black;
 
   pre, code {
     @apply text-gray-500

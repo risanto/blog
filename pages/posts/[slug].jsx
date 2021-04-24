@@ -69,7 +69,6 @@ export default function Post(props) {
 
     useEffect(() => {
         listenToScrollEvent()
-        console.log(scrollPosition)
     }, [scrollPosition])
 
     return (

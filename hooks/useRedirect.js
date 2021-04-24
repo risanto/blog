@@ -11,6 +11,7 @@ export default function useRedirect() {
     */
     return function redirect(pathname, newQueries) {
         let query = router.query
+        if (query.slug) delete query.slug
 
         for (let key in newQueries) query[key] = newQueries[key]
 
