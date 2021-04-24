@@ -24,7 +24,7 @@ export default function TagList({ tags, rowReverse, withBackground }) {
         {tags.map((tag, idx) => {
             return <li
                 id={"taglist-" + tag.slug}
-                className={"flex " + (withBackground ? "ml-2" : "ml-1")}
+                className={"flex " + (withBackground ? "mr-2" : "mr-1")}
                 key={idx}
             >
                 <TagItem tag={tag} withBackground={withBackground} />

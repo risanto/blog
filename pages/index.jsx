@@ -46,7 +46,8 @@ export default function Index({ posts, languages, tags }) {
 
                 {/* Tags */}
                 <img
-                    className={"bg-indigo-50 rounded-l p-1"}
+                    className={"place-self-center bg-indigo-50 rounded-l p-1 w-6"}
+                    style={{ height: '1.5rem'}}
                     src="/img/tag.svg" height={25} width={25}
                 />
                 <TagList tags={tags} />
