@@ -1,11 +1,12 @@
 import Nav from './Nav'
 import Footer from './Footer'
+
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 export default function Layout({ children, pageTitle, description, previewImage, siteName }) {
+    const { asPath } = useRouter()
     const url = 'https://blogrisan.netlify.app'
-    const router = useRouter()
     const imageLink = `${url}${previewImage ? `/${previewImage}` : `/img/r-logo.png`}`
 
     return (
@@ -18,7 +19,7 @@ export default function Layout({ children, pageTitle, description, previewImage,
                 <meta name="description" content={description} />
 
                 {/* Open Graph */}
-                <meta property="og:url" content={`${url}${router.pathname}`} key="ogurl" />
+                <meta property="og:url" content={url + asPath} key="ogurl" />
                 <meta property="og:image" content={imageLink} key="ogimage" />
                 <meta property="og:site_name" content={siteName} key="ogsitename" />
                 <meta property="og:title" content={pageTitle} key="ogtitle" />
@@ -27,8 +28,7 @@ export default function Layout({ children, pageTitle, description, previewImage,
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" key="twcard" />
                 
-                <link rel="icon" href={"img/r-logo.png"}
-                    type="image/x-icon" />
+                <link rel="icon" href={"img/r-logo.png"} type="image/x-icon" />
                 <title>{pageTitle}</title>
             </Head>
             <div className={"flex justify-center"}>
