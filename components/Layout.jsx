@@ -8,9 +8,11 @@ export default function Layout({ children, pageTitle, description, previewImage,
     const { asPath } = useRouter()
     const url = 'https://blogrisan.netlify.app'
 
-    const imageLink = previewImage.includes('http')
-        ? previewImage
-        : `${url}${previewImage ? `/${previewImage}` : `/img/r-logo.png`}`
+    const imageLink = previewImage
+        ? previewImage.includes('http')
+            ? previewImage // when the image is from external url
+            : `${url}${previewImage}` // when the image is local
+        : `${url}/img/r-logo.png` // when there's no preview image
 
     return (
         <>
