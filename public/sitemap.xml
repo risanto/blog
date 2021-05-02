@@ -1,7 +1,6 @@
-
-      <?xml version="1.0" encoding="UTF-8"?>
-        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-            
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
               <url>
                   <loc>https://www.risan.dev/about</loc>
               </url>
@@ -18,5 +17,5 @@
                   <loc>https://www.risan.dev/posts/reacquainting-with-react-cookens-development-journey</loc>
               </url>
           
-        </urlset>
+</urlset>
   
