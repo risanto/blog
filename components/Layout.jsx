@@ -35,6 +35,8 @@ export default function Layout({ children, pageTitle, description, previewImage,
 
                 <link rel="icon" href={"img/r-logo.png"} type="image/x-icon" />
                 <title>{pageTitle}</title>
+
+                <meta name="google-site-verification" content="wFzmqB_u3xfCcWuiOfPHFeETHAkSXN2aTnzRxV_s0uA" />
             </Head>
             <div className={"flex justify-center"}>
                 <Nav />
