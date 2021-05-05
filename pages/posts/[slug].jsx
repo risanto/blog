@@ -3,8 +3,13 @@ import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 
 import Layout from '../../components/Layout'
 import TagList from '../../components/TagList'
+import JobHuntChart from '../../components/JobHuntChart'
 
 import { useEffect, useState } from 'react'
+import renderToString from 'next-mdx-remote/render-to-string'
+import hydrate from 'next-mdx-remote/hydrate'
+
+const components = { JobHuntChart }
 
 export default function Post(props) {
     const { postData } = props
@@ -43,7 +48,7 @@ export default function Post(props) {
     // Only show button when the scroll position is more than 0%
     function setScrollToTopBtnDisplay() {
         const scrollToTopBtn = document.getElementById("scrollToTopBtn")
-    
+
         if (scrollPosition > 0) {
             scrollToTopBtn.style.display = "block"
         } else {
@@ -75,6 +80,8 @@ export default function Post(props) {
         return mounted = false
     }, [scrollPosition])
 
+    const hydratedContent = hydrate(postData.contentHtml, components)
+
     return (
         <Layout
             pageTitle={postData.title}
@@ -101,9 +108,11 @@ export default function Post(props) {
             </header>
             <article
                 className={"cms-content"}
-                dangerouslySetInnerHTML={
-                    { __html: postData.contentHtml }
-                }>
+            // dangerouslySetInnerHTML={
+            //     { __html: postData.contentHtml }
+            // }
+            >
+                {hydratedContent}
             </article>
             <button
                 style={{ display: 'none' }}
@@ -131,6 +140,7 @@ export async function getStaticProps({ params }) {
     postData.author = getAuthor(postData.author)
     postData.language = getLanguage(postData.language)
     postData.tags = getTags(postData.tags)
+    postData.contentHtml = await renderToString(postData.contentHtml, { components })
 
     return {
         props: { postData }
