@@ -76,7 +76,7 @@
   }
 
   a {
-    @apply bg-blue-50 px-1;
+    @apply bg-blue-50;
 
     .dark & {
       @apply text-gray-700;
