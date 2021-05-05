@@ -19,6 +19,11 @@ export default function Nav() {
                         <a>About</a>
                     </Link>
                 </li>
+                <li className={"hover:underline ml-4"}>
+                    <Link href="/projects">
+                        <a>Projects</a>
+                    </Link>
+                </li>
             </ul>
             <button
                 aria-label="Toggle Dark Mode"
