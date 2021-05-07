@@ -1,5 +1,4 @@
 import Layout from '../components/Layout'
-import TechPill from '../components/TechPill'
 import Link from 'next/link'
 
 export default function About() {
