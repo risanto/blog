@@ -4,12 +4,13 @@ import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 import Layout from '../../components/Layout'
 import TagList from '../../components/TagList'
 import JobHuntChart from '../../components/JobHuntChart'
+import Link from '../../components/Link'
 
 import { useEffect, useState } from 'react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 
-const components = { JobHuntChart }
+const components = { JobHuntChart, a: (props) => <Link {...props} /> }
 
 export default function Post(props) {
     const { postData } = props
@@ -107,7 +108,7 @@ export default function Post(props) {
             <article
                 className={"cms-content"}
             >
-                <MDXRemote {...postData.content} components={components}/>
+                <MDXRemote {...postData.content} components={components} />
             </article>
             <button
                 style={{ display: 'none' }}
