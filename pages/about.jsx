@@ -12,7 +12,7 @@ export default function About() {
             {/* Introduction */}
             <p className={"mt-4"}>I'm Risan, a full stack developer who loves to learn and exercise both my analytical and creative muscles.</p>
 
-            <p className={"mt-4"}>I enjoy using <span className={"bg-indigo-50 dark:text-gray-500"}>Node.js / Express / PostgreSQL / Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-500"}>React / Next.js</span> on the frontend.</p>
+            <p className={"mt-4"}>I enjoy using <span className={"bg-indigo-50 dark:text-gray-700"}>Node.js / Express / PostgreSQL / Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-700"}>React / Next.js</span> on the frontend.</p>
 
             <p className={"mt-4"}>I started this personal site to write about programming, personal development, and also showcase my personal projects.</p>
 
@@ -48,12 +48,12 @@ export default function About() {
 
                     <div className={"transform transition hover:-translate-y-1 hover:duration-500 flex flex-col"}>
                         <div className={"flex mt-4"}>
-                            <h3 className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-1 text-lg relative top-1"}>Cooken</h3>
+                            <h3 className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-1 text-lg relative top-1 dark:text-gray-700"}>Cooken</h3>
 
                             <div className={"flex flex-row items-center justify-center flex-grow relative top-1"}>
                                 <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10"} src={"/img/react.png"} width={30} />
 
-                                <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10 bg-white p-1"} src={"/img/expressjs.png"} width={80} />
+                                <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10 bg-white p-1 rounded ml-1"} src={"/img/expressjs.png"} width={80} />
 
                                 <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10 p-1"} src={"/img/postgres.png"} width={30} />
 
