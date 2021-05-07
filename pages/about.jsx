@@ -61,7 +61,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className={"p-3 border rounded-lg relative -top-3 ml-2"}>
+                        <div className={"px-4 pt-5 pb-4 border rounded-lg relative -top-3 ml-2"}>
                             <p>An application where users can search for recipes based on the the ingredients they have, using a third-party API to fetch the data.</p>
 
                             <ul className={"mt-2 text-sm float-right"}>
