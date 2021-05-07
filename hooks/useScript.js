@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function useScript(src) {
+export default function useScript(src) {
   const [status, setStatus] = useState(src ? 'loading' : 'idle')
 
   useEffect(
@@ -63,5 +63,3 @@ function useScript(src) {
 
   return status
 }
-
-export default useScript

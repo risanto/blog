@@ -26,7 +26,7 @@ export default function Layout({ children, pageTitle, description, previewImage,
                 {/* Open Graph */}
                 <meta property="og:url" content={url + asPath} key="ogurl" />
                 <meta property="og:image" content={imageLink} key="ogimage" />
-                <meta property="og:site_name" content={siteName} key="ogsitename" />
+                <meta property="og:site_name" content={siteName ? siteName : 'risan.dev'} key="ogsitename" />
                 <meta property="og:title" content={pageTitle} key="ogtitle" />
                 <meta property="og:description" content={description} key="ogdesc" />
 
@@ -35,8 +35,13 @@ export default function Layout({ children, pageTitle, description, previewImage,
 
                 <link rel="icon" href={"img/r-logo.png"} type="image/x-icon" />
                 <title>{pageTitle}</title>
-
+                
+                {/*  Google Console */}
                 <meta name="google-site-verification" content="wFzmqB_u3xfCcWuiOfPHFeETHAkSXN2aTnzRxV_s0uA" />
+
+                {/* Sankey */}
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <script type="text/javascript" src="/js/sankey.js"></script>
             </Head>
             <div className={"flex justify-center"}>
                 <Nav />

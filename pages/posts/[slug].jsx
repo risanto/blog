@@ -6,8 +6,8 @@ import TagList from '../../components/TagList'
 import JobHuntChart from '../../components/JobHuntChart'
 
 import { useEffect, useState } from 'react'
-import renderToString from 'next-mdx-remote/render-to-string'
-import hydrate from 'next-mdx-remote/hydrate'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 
 const components = { JobHuntChart }
 
@@ -80,14 +80,12 @@ export default function Post(props) {
         return mounted = false
     }, [scrollPosition])
 
-    const hydratedContent = hydrate(postData.contentHtml, components)
-
     return (
         <Layout
             pageTitle={postData.title}
             description={postData.description}
             previewImage={postData.thumbnail}
-        // siteName={}
+            siteName={"risan.dev"}
         >
             <header>
                 <h1 className={"font-bold text-4xl dark:text-white"}>{postData.title}</h1>
@@ -108,11 +106,8 @@ export default function Post(props) {
             </header>
             <article
                 className={"cms-content"}
-            // dangerouslySetInnerHTML={
-            //     { __html: postData.contentHtml }
-            // }
             >
-                {hydratedContent}
+                <MDXRemote {...postData.content} components={components}/>
             </article>
             <button
                 style={{ display: 'none' }}
@@ -140,7 +135,7 @@ export async function getStaticProps({ params }) {
     postData.author = getAuthor(postData.author)
     postData.language = getLanguage(postData.language)
     postData.tags = getTags(postData.tags)
-    postData.contentHtml = await renderToString(postData.contentHtml, { components })
+    postData.content = await serialize(postData.content)
 
     return {
         props: { postData }
