@@ -66,22 +66,22 @@ export default function About() {
 
                             <ul className={"mt-2 text-sm float-right"}>
                                 <a
-                                    className={"hover:bg-indigo-50 px-1"}
+                                    className={"hover:underline px-1"}
                                     target={"_blank"}
                                     href={"https://s4.gifyu.com/images/cooken.gif"}
                                 >GIF</a>
                                 <a
-                                    className={"ml-3 hover:bg-indigo-50 px-1"}
+                                    className={"ml-3 hover:underline px-1"}
                                     target={"_blank"}
                                     href={"https://cooken.netlify.app"}
                                 >Live site</a>
                                 <a
-                                    className={"ml-3 hover:bg-indigo-50 px-1"}
+                                    className={"ml-3 hover:underline px-1"}
                                     target={"_blank"}
                                     href={"https://github.com/risanto/cooken"}
                                 >Github</a>
                                 <a
-                                    className={"ml-3 hover:bg-indigo-50 px-1"}
+                                    className={"ml-3 hover:underline px-1"}
                                     target={"_blank"}
                                     href={"https://www.risan.dev/posts/3-konsep-yang-bisa-membantumu-ketika-stuck-ngoding"}
                                 >Blog</a>
