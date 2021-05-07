@@ -9,12 +9,14 @@ export default function About() {
             // previewImage={}
             // siteName={}
         >
+            {/* Introduction */}
             <p className={"mt-4"}>I'm Risan, a full stack developer who loves to learn and exercise both my analytical and creative muscles.</p>
             
             <p className={"mt-4"}>I enjoy using <span className={"bg-indigo-50 dark:text-gray-500"}>Node.js / Express / PostgreSQL / Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-500"}>React / Next.js</span> on the frontend.</p>
 
             <p className={"mt-4"}>I started this personal site to write about programming, personal development, and also showcase my personal projects.</p>
 
+            {/* External sites */}
             <div className={"mt-8 flex"}>
                 <Link href={"https://github.com/risanto"}>
                     <a target={"_blank"}>
@@ -33,6 +35,16 @@ export default function About() {
                     </a>
                 </Link>
             </div>
+
+            <p className={"mt-10"}>Some of the projects I made:</p>
+
+            {/* Projects */}
+            <article className={"mt-10"}>
+                <img 
+                className={"transform transition hover:-translate-y-2 hover:duration-500"}
+                src={"/img/cooken-project.png"}
+                />
+            </article>
         </Layout>
     )
 }
