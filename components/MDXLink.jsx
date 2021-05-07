@@ -1,8 +1,8 @@
-import { Link as NextLink } from 'next/link'
+import Link from 'next/link'
 
-export default function Link({ children, href }) {
+export default function MDXLink({ children, href }) {
     if (href.startsWith('/')) {
-        return <NextLink to={href}>{children}</NextLink>
+        return <Link to={href}>{children}</Link>
     }
 
     // Check if the link is for a section on the page

@@ -4,7 +4,7 @@ import { getAuthor, getLanguage, getTags } from '../../lib/meta'
 import Layout from '../../components/Layout'
 import TagList from '../../components/TagList'
 import JobHuntChart from '../../components/JobHuntChart'
-import Link from '../../components/Link'
+import Link from '../../components/MDXLink'
 
 import { useEffect, useState } from 'react'
 import { serialize } from 'next-mdx-remote/serialize'
