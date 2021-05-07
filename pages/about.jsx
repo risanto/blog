@@ -9,7 +9,9 @@ export default function About() {
             // previewImage={}
             // siteName={}
         >
-            <p className={"mt-4"}>I'm Risan, a full stack developer who loves to learn and exercise both my analytical and creative muscles. I'm comfortable using <span className={"bg-indigo-50 dark:text-gray-500"}>Node.js / Express / PostgreSQL / Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-500"}>React / Next.js</span> on the frontend.</p>
+            <p className={"mt-4"}>I'm Risan, a full stack developer who loves to learn and exercise both my analytical and creative muscles.</p>
+            
+            <p className={"mt-4"}>I enjoy using <span className={"bg-indigo-50 dark:text-gray-500"}>Node.js / Express / PostgreSQL / Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-500"}>React / Next.js</span> on the frontend.</p>
 
             <p className={"mt-4"}>I started this personal site to write about programming, personal development, and also showcase my personal projects.</p>
 
