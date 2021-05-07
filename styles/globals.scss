@@ -76,7 +76,8 @@
   }
 
   a {
-    @apply bg-blue-50;
+    @apply underline;
+    // @apply bg-blue-50;
 
     .dark & {
       @apply text-gray-700;
@@ -84,7 +85,7 @@
   }
 
   a:hover {
-    @apply bg-blue-100;
+    @apply bg-blue-50;
 
     .dark & {
       @apply text-gray-700;
