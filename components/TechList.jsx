@@ -39,7 +39,7 @@ export default function TechList({ names }) {
                 const tech = techItems.find(item => item.name === name)
 
                 return (
-                    <img alt={tech.name + ' logo'} src={tech.imgSrc} className={tech.classes + (idx !== 0 && "ml-1")} width={tech.width} height={tech.height} />
+                    <img key={tech.name} alt={tech.name + ' logo'} src={tech.imgSrc} className={tech.classes + (idx !== 0 && "ml-1")} width={tech.width} height={tech.height} />
                 )
             })}
         </div>

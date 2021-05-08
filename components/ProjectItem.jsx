@@ -3,10 +3,10 @@ import ProjectLinks from '../components/ProjectLinks'
 
 export default function ProjectItem({ imgSrc, name, description, techList, links }) {
     return (
-        <article className={"mt-8"}>
+        <article className={"mt-8"} key={name}>
             <img
                 className={"transform transition hover:-translate-y-2 hover:duration-500"}
-                imgAlt={name + ' project'}
+                alt={name + ' project'}
                 src={imgSrc}
                 style={{
                     maxWidth: '100%',

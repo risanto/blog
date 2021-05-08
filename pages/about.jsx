@@ -75,6 +75,7 @@ export default function About() {
                 {projects.map(project => {
                     return (
                         <ProjectItem
+                            key={project.name}
                             imgSrc={project.imgSrc}
                             name={project.name}
                             description={project.description}
