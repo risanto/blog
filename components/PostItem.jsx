@@ -22,7 +22,7 @@ export default function PostItem({ post }) {
                 </a>
             </Link>
 
-            <div className={"w-full absolute -top-6 right-0 p-2"}>
+            <div className={"w-full absolute -top-4 right-0"}>
                 <TagList tags={post.data.tags} rowReverse={true} withBackground={true} />
             </div>
         </div>

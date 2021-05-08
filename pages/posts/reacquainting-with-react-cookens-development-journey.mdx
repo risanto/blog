@@ -16,7 +16,7 @@ This year, I decided to start building my portfolio site from scratch, just in c
 
 I’ve made a resume site before but it wasn’t built with a mobile-first approach and this time I want to have a resume site that showcases my projects. One problem is that the projects that I’ve made previously weren’t built with responsiveness in mind — it also doesn’t help that I felt disgusted whenever I looked at my old codes. So, I decided to make some new projects from scratch.
 
-**The idea**
+### **The idea**
 
 I wanted to build a simple app to showcase my ability to utilise APIs with a Node.js back-end and a React front-end. I found [this video](https://www.youtube.com/watch?v=UxcdwEOCD48) and decided to use the first API that he mentioned since it seemed interesting.
 
@@ -28,7 +28,7 @@ I then used Figma to create a mockup of the app.
 
 I had so much fun just designing the mockups of these two versions of the landing page. I wonder why I didn’t use Figma more in my past projects — the answer: I was in a bootcamp and there just wasn’t enough time to build professional-looking mockups or toy around with designs.
 
-**The first 10 hours: relearning the tools**
+### **The first 10 hours: relearning the tools**
 
 I tried targetting Spoonacular’s API and it worked as intended, so I decided to start designing the home page of the app with React right away. I had to relearn React since it has been almost a year since I’ve used it. I watched some parts of [Freecodecamp’s React Course](https://www.youtube.com/watch?v=4UZrsTqkcW4) and [Dev Ed’s React State Management Tutorial](https://www.youtube.com/watch?v=35lXWvCuM8o) just to refresh my knowledge.
 
@@ -40,7 +40,7 @@ Basically, I could decide which utility class to apply conditionally at differen
 
 From [Tailwind CSS official website](https://tailwindcss.com/docs/responsive-design).
 
-**11–20 hours on the project: initial backend and front-end routings**
+### **11–20 hours on the project: initial backend and front-end routings**
 
 It was time to work on the backend side of the app. So, I decided to start with 4 recipe routes, which were:
 
@@ -61,7 +61,7 @@ After that, I came up with these mockups for the recipe page.
 
 I wasn’t entirely sure whether I could replicate this completely but at least I was gonna give it a try.
 
-**Going off on a little bit of tangent: talking about perfectionism**
+### **Going off on a little bit of tangent: talking about perfectionism**
 
 So, I realised that I’ve spent almost 20 hours over the span of two weeks and I’ve only got my main page to show whereas now I only started working on the recipe page. I could excuse myself by saying that my front-end skills were quite rusty since I haven’t worked on them for almost a year, but then if I was being honest my main culprit was perfectionism which made me keep revising and revising the look of the front page just to get it exactly how I wanted it to be. Just at that moment when I took a break, I stumbled upon [Thomas Frank’s video](https://www.youtube.com/watch?v=rGNa1nl3X4U) about how perfectionism destroys productivity.
 
@@ -79,7 +79,7 @@ Another relevant post that talked about perfectionism was [the Parable of the Po
 
 All in all, I needed to accept that as a beginner I was going to suck, and to get better I should be focusing on quantity over quality.
 
-**21–30 hours on the project: search and pagination**
+### **21–30 hours on the project: search and pagination**
 
 I added a vertical translate on the card component to make it move up on a user’s hover. There was a small issue, though. The hover action was jittery and whenever I hover on the lower edge of the cards it continued to move up and down and up and down again, all in less than a second.
 
@@ -137,7 +137,7 @@ I just need to remove the focus border that appears whenever I click on buttons 
 
 What I’m not happy about is that it took me 30 hours (over the span of 3 weeks) to create these 3 pages (home, search results, and recipe), but I expect to take a shorter amount of time on my next React project, especially if I’m gonna reuse my components and boilerplate codes.
 
-**31–40 hours on the project: setting the database and more API endpoints**
+### **31–40 hours on the project: setting the database and more API endpoints**
 
 After the public routes have been set up it was time to set up some user-only routes and work on the database. So, this was the database schema:
 
@@ -177,7 +177,7 @@ This [JWT Authentication Tutorial by Web Dev Simplified](https://www.youtube.com
 
 I also used localStorage as the place to put the access token, despite it not being as secure as storing the access token on httpOnly cookie, but I’ll get back to it later when I can.
 
-**41–50 hours on the project: join/login and save recipe for logged in user**
+### **41–50 hours on the project: join/login and save recipe for logged in user**
 
 So, for some reason, I kept encountering a warning like this.
 
@@ -215,7 +215,7 @@ And it looks like this on a desktop screen.
 
 ![](https://cdn-images-1.medium.com/max/1000/1*hB1zQWpEirteaEKEuKdqbg.gif)
 
-**51–60 hours on the project: autocomplete and MyIngredients page**
+### **51–60 hours on the project: autocomplete and MyIngredients page**
 
 After save recipe feature was implemented, I started to work on the autocomplete ingredient feature on the MyIngredients page. In detail, what I needed to do was:
 
@@ -250,7 +250,7 @@ And it looks like this on bigger screen.
 
 Now it’s time to move on to SavedRecipes page.
 
-**61–70 hours on the project: navigation drawer and deployment**
+### **61–70 hours on the project: navigation drawer and deployment**
 
 After I finished all of the pages I added a [navigation drawer](https://dev.to/fayaz/making-a-navigation-drawer-sliding-sidebar-with-tailwindcss-blueprint-581l) which appears whenever the hamburger button is clicked. This drawer will also be closed automatically whenever it’s clicked outside.
 
@@ -260,7 +260,7 @@ Now that the minimum viable product was finished, it’s time to deploy. I deplo
 
 After I was done with the server, there were still several things to do on the client, such as making the page scroll to the top when it changes endpoint, lazy loading images using the package `react-lazy-load-image-component`, I also changed the router from BrowserRouter to HashRouter to deal with the reloading issue.
 
-**71+ hours: optimisation and wrapping up**
+### **71+ hours: optimisation and wrapping up**
 
 The app was successfully deployed and all I needed to do was optimise it. I used Lighthouse to check the app’s score and applied some of its suggestions. I learned to use [link preconnect and DNS prefetch](https://css-tricks.com/using-relpreconnect-to-establish-network-connections-early-and-increase-performance/) so that it’d establish network connections early and sped up the fetching of the assets from the server. 
 
