@@ -7,7 +7,7 @@ export default function About() {
         {
             imgSrc: "/img/cooken-project.png",
             name: "Cooken",
-            description: "An application where users can search for recipes based on the the ingredients they have, using a third-party API to fetch the data.",
+            description: "An application where users can search recipes based on the ingredients that they have. I use a third-party API to fetch the recipes data.",
             techList: ["react", "expressjs", "postgres", "sequelize"],
             links: [
                 {
@@ -47,18 +47,22 @@ export default function About() {
             {/* External sites */}
             <div className={"mt-8 flex"}>
                 <Link href={"https://github.com/risanto"}>
-                    <a target={"_blank"}>
+                    <a
+                        target={"_blank"}
+                        className={"hover:cursor-pointer hover:-translate-y-1 transform transition hover:duration-300 bg-indigo-50 rounded p-1"}
+                    >
                         <img
-                            className={"hover:cursor-pointer hover:-translate-y-1 transform transition hover:duration-300 bg-indigo-50 rounded p-1"}
-                            src="/img/github.svg" height={25} width={25}
+                            src="/img/github.svg" height={17} width={17}
                         />
                     </a>
                 </Link>
                 <Link href={"https://www.linkedin.com/in/risantomulyo/"}>
-                    <a target={"_blank"}>
+                <a
+                        target={"_blank"}
+                        className={"hover:cursor-pointer hover:-translate-y-1 transform transition hover:duration-300 bg-indigo-50 rounded p-1 ml-2"}
+                    >
                         <img
-                            className={"ml-2 hover:cursor-pointer hover:-translate-y-1 transform transition hover:duration-300 bg-indigo-50 rounded p-1"}
-                            src="/img/linkedin.svg" height={25} width={25}
+                            src="/img/linkedin.svg" height={17} width={17}
                         />
                     </a>
                 </Link>

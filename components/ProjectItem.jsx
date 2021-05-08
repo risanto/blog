@@ -8,6 +8,10 @@ export default function ProjectItem({ imgSrc, name, description, techList, links
                 className={"transform transition hover:-translate-y-2 hover:duration-500"}
                 imgAlt={name + ' project'}
                 src={imgSrc}
+                style={{
+                    maxWidth: '100%',
+                    height: 'auto'
+                }}
             />
 
             <div className={"transform transition hover:-translate-y-1 hover:duration-500 flex flex-col"}>
