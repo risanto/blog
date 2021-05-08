@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import TechList from '../components/TechList'
 import Link from 'next/link'
 
 export default function About() {
@@ -48,17 +49,9 @@ export default function About() {
 
                     <div className={"transform transition hover:-translate-y-1 hover:duration-500 flex flex-col"}>
                         <div className={"flex mt-4"}>
-                            <h3 className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-1 text-lg relative top-1 dark:text-gray-700"}>Cooken</h3>
+                            <h3 className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-1 text-lg relative top-1 dark:text-gray-700 rounded-tl rounded-br"}>Cooken</h3>
 
-                            <div className={"flex flex-row items-center justify-center flex-grow relative top-1"}>
-                                <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10"} src={"/img/react.png"} width={30} />
-
-                                <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10 bg-white p-1 rounded ml-1"} src={"/img/expressjs.png"} width={80} />
-
-                                <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10 p-1"} src={"/img/postgres.png"} width={30} />
-
-                                <img className={"transform transition hover:-translate-y-1 hover:duration-500 z-10 p-1"} src={"/img/sequelize.svg"} width={30} />
-                            </div>
+                            <TechList names={["react", "expressjs", "postgres", "sequelize"]}/>
                         </div>
 
                         <div className={"px-4 pt-5 pb-4 border rounded-lg relative -top-3 ml-2 dark:border-gray-700"}>
