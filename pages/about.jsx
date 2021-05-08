@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import TechList from '../components/TechList'
+import ProjectLinks from '../components/ProjectLinks'
 import Link from 'next/link'
 
 export default function About() {
@@ -51,36 +52,33 @@ export default function About() {
                         <div className={"flex mt-4"}>
                             <h3 className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-1 text-lg relative top-1 dark:text-gray-700 rounded-tl rounded-br"}>Cooken</h3>
 
-                            <TechList names={["react", "expressjs", "postgres", "sequelize"]}/>
+                            <TechList names={["react", "expressjs", "postgres", "sequelize"]} />
                         </div>
 
                         <div className={"px-4 pt-5 pb-4 border rounded-lg relative -top-3 ml-2 dark:border-gray-700"}>
                             <p>An application where users can search for recipes based on the the ingredients they have, using a third-party API to fetch the data.</p>
 
-                            <ul className={"mt-2 text-sm float-right"}>
-                                <a
-                                    className={"hover:underline px-1"}
-                                    target={"_blank"}
-                                    href={"https://s4.gifyu.com/images/cooken.gif"}
-                                >GIF</a>
-                                <a
-                                    className={"ml-3 hover:underline px-1"}
-                                    target={"_blank"}
-                                    href={"https://cooken.netlify.app"}
-                                >Live site</a>
-                                <a
-                                    className={"ml-3 hover:underline px-1"}
-                                    target={"_blank"}
-                                    href={"https://github.com/risanto/cooken"}
-                                >Github</a>
-                                <a
-                                    className={"ml-3 hover:underline px-1"}
-                                    target={"_blank"}
-                                    href={"https://www.risan.dev/posts/3-konsep-yang-bisa-membantumu-ketika-stuck-ngoding"}
-                                >Blog</a>
-                            </ul>
+                            <ProjectLinks
+                                items={[
+                                    {
+                                        name: "GIF",
+                                        href: "https://s4.gifyu.com/images/cooken.gif"
+                                    },
+                                    {
+                                        name: "Live site",
+                                        href: "https://cooken.netlify.app"
+                                    },
+                                    {
+                                        name: "Github",
+                                        href: "https://github.com/risanto/cooken"
+                                    },
+                                    {
+                                        name: "Blog",
+                                        href: "https://github.com/risanto/cooken"
+                                    }
+                                ]}
+                            />
                         </div>
-
                     </div>
                 </article>
             </section>
