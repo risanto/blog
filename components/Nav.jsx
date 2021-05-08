@@ -9,14 +9,14 @@ export default function Nav() {
             <ul className={"flex"}>
                 <li>
                     <Link href="/">
-                        <a
+                        <h2
                             className={"hover:underline"}
-                        >Blog</a>
+                        >Blog</h2>
                     </Link>
                 </li>
                 <li className={"hover:underline ml-4"}>
                     <Link href="/about">
-                        <a>About</a>
+                        <h2>About</h2>
                     </Link>
                 </li>
             </ul>

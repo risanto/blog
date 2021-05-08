@@ -89,12 +89,11 @@ export default function Post(props) {
             siteName={"risan.dev"}
         >
             <header>
-                <h1 className={"font-bold text-4xl dark:text-white"}>{postData.title}</h1>
+                <h1 className={"text-4xl"}>{postData.title}</h1>
 
                 <div className={"mt-4 flex justify-between"}>
-                    <p className={"text-gray-700 dark:text-gray-400"}>{postData.author.name} / {date}
-                    </p>
-                    <p className={"text-gray-700 dark:text-gray-400"}>{postData.readingTime.text}</p>
+                    <h6>{postData.author.name} / {date}</h6>
+                    <h6>{postData.readingTime.text}</h6>
                 </div>
 
                 <img

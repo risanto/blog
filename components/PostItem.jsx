@@ -17,8 +17,7 @@ export default function PostItem({ post }) {
                         <h2
                             className={"font-medium text-xl mt-2"}
                         >{post.data.title}</h2>
-                        <p className={"text-sm text-gray-500 dark:text-gray-400"}
-                        >{date} • {post.data.readingTime.text}</p>
+                        <h6>{date} • {post.data.readingTime.text}</h6>
                     </div>
                 </a>
             </Link>
