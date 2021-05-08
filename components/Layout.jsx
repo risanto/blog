@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 export default function Layout({ children, pageTitle, description, previewImage, siteName }) {
     const { asPath } = useRouter()
-    const url = 'https://blogrisan.netlify.app'
+    const url = 'https://risan.dev'
 
     const imageLink = previewImage
         ? previewImage.includes('http')
