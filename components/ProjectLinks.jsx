@@ -14,7 +14,7 @@ export default function ProjectLinks({ items }) {
                         key={item.name}
                     >
                         <a
-                            className={"hover:underline px-1"}
+                            className={"hover:underline px-1 ml-1"}
                             target={"_blank"}
                             href={item.href}
                         >
@@ -22,7 +22,7 @@ export default function ProjectLinks({ items }) {
 
                             {/* Add breaking space in small viewport to split links more equally */}
                             {( 
-                                width < 400 && items.length >= 5
+                                width < 450 && items.length >= 5
                                 && idx === Math.floor(items.length / 2) - 1
                             ) && <br />
                             }
