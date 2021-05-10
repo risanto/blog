@@ -11,7 +11,11 @@ export default function About() {
             techList: ["react", "expressjs", "postgres", "sequelize", "tailwindcss"],
             links: [
                 {
-                    name: "GIF",
+                    name: "GIF (mobile)",
+                    href: "https://s4.gifyu.com/images/cooken.gif"
+                },
+                {
+                    name: "GIF (desktop)",
                     href: "https://s4.gifyu.com/images/cooken.gif"
                 },
                 {
@@ -31,24 +35,16 @@ export default function About() {
         {
             imgSrc: "/img/cooken-project.png",
             name: "Risan.dev",
-            description: ["A personal blog/portfolio site that I made to contain my writings and showcase my personal projects, utilising Netlify CMS to manage the posts.", "From making it I learned to utilise Next.js and server-side rendering to build a single page application that loads quickly and also attends to SEO."],
-            techList: ["react", "expressjs", "postgres", "sequelize", "tailwindcss"],
+            description: ["A personal blog/portfolio site that I made to contain my writings and showcase my personal projects, utilising Netlify CMS to manage the posts.", "From making it I learned to use Next.js and server-side rendering to build a single-page application that loads quickly and also attends to SEO."],
+            techList: ["nextjs", "netlifycms", "tailwindcss"],
             links: [
                 {
-                    name: "GIF",
-                    href: "https://s4.gifyu.com/images/cooken.gif"
-                },
-                {
                     name: "Live site",
-                    href: "https://cooken.netlify.app"
+                    href: "https://risan.dev"
                 },
                 {
                     name: "Github",
-                    href: "https://github.com/risanto/cooken"
-                },
-                {
-                    name: "Blog",
-                    href: "https://github.com/risanto/cooken"
+                    href: "https://github.com/risanto/porto-blog"
                 }
             ],
         }

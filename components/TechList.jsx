@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 export default function TechList({ names }) {
-    const defaultClasses = "transform transition hover:-translate-y-1 hover:duration-500 z-10 flex justify-center items-center "
+    const defaultClasses = "transform transition hover:-translate-y-1 hover:duration-500 z-10 flex justify-center items-center dark:bg-white "
 
     const techItems = [
         {
@@ -13,10 +13,10 @@ export default function TechList({ names }) {
         },
         {
             name: "expressjs",
-            classes: defaultClasses + "bg-white p-1 rounded ",
+            classes: defaultClasses + "bg-white p-1 ",
             imgSrc: "/img/expressjs.png",
-            width: 85,
-            height: 23
+            width: 90,
+            height: 25
         },
         {
             name: "postgres",
@@ -39,18 +39,34 @@ export default function TechList({ names }) {
             width: 25,
             height: 25
         },
-
+        {
+            name: "nextjs",
+            classes: defaultClasses + "bg-white p-1 ",
+            imgSrc: "/img/nextjs.png",
+            width: 42,
+            height: 25
+        },
+        {
+            name: "netlifycms",
+            classes: defaultClasses + "bg-white p-1 ",
+            imgSrc: "/img/netlifycms.png",
+            width: 96,
+            height: 25
+        }
     ]
 
     return (
-        <div className={"flex flex-row items-center justify-center flex-grow relative top-1"}>
+        <div className={"flex flex-row items-center justify-center flex-grow"}>
             {names.map((name, idx) => {
                 const tech = techItems.find(item => item.name === name)
 
                 return (
                     <div
                         key={tech.name}
-                        className={tech.classes + (idx !== 0 ? "ml-1" : "")}
+                        className={
+                            tech.classes + 
+                            (idx !== 0 ? "ml-1 " : "")
+                        }
                     >
                         <Image
                             alt={tech.name + ' logo'}

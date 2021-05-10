@@ -553,6 +553,11 @@ bail@^1.0.0:
   resolved "https://registry.npmjs.org/bail/-/bail-1.0.5.tgz"
   integrity sha512-xFbRxM1tahm08yHBP16MMjVUAvDaBMD38zsM9EMAUN61omwLmKlOpB/Zku5QkjZ8TZ4vn53pj+t518cH0S03RQ==
 
+balance-text@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/balance-text/-/balance-text-3.3.0.tgz#8af2bc65a3e396b8f55f41b216327c33500544b7"
+  integrity sha512-UqP+MT0lQhMAdFGyHwRXrtfto6ndzelPe1Az94ZOcFsui7+RIwM9aNcQPRsIGOwHptm7h7OqeYX57CCLgWNXQA==
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
@@ -2558,6 +2563,13 @@ raw-body@2.4.1:
     http-errors "1.7.3"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-balance-text@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-balance-text/-/react-balance-text-2.0.1.tgz#0da811d37190c2ea0d4b10cbeb4ff5c1f86ab1b0"
+  integrity sha512-AyhX0GchhK6xcPEzvsLPAgbM8dcUA6xkrWEYJtyg3voDRYW/QLPlCFgHU3r3sdTaZu0UztsOdJa8BemScd8llQ==
+  dependencies:
+    balance-text "^3.2.0"
 
 react-dom@17.0.2:
   version "17.0.2"

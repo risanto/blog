@@ -35,13 +35,16 @@ export default function Layout({ children, pageTitle, description, previewImage,
 
                 <link rel="icon" href={"img/r-logo.png"} type="image/x-icon" />
                 <title>{pageTitle}</title>
-                
+
                 {/*  Google Console */}
                 <meta name="google-site-verification" content="wFzmqB_u3xfCcWuiOfPHFeETHAkSXN2aTnzRxV_s0uA" />
 
                 {/* Sankey */}
                 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
                 <script type="text/javascript" src="/js/sankey.js"></script>
+
+                {/* Balance text */}
+                <script src="//cdnjs.cloudflare.com/ajax/libs/balance-text/3.0.0/balancetext.min.js"></script>
             </Head>
             <div className={"flex justify-center"}>
                 <Nav />

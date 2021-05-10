@@ -17,9 +17,9 @@ export default function ProjectItem({ imgSrc, name, description, techList, links
             </div>
 
             <div className={"transform transition hover:-translate-y-1 hover:duration-500 flex flex-col"}>
-                <div className={"flex mt-4"}>
+                <div className={"flex mt-4 relative top-1 dark:bg-white dark:rounded-tl dark:rounded-br mr-2"}>
                     <h3
-                        className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-1 text-lg relative top-1 dark:text-gray-700 rounded-tl rounded-br"}
+                        className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-2 text-lg dark:text-gray-700 rounded-tl rounded-br h-8"}
                     >{name}</h3>
 
                     <TechList names={techList} />
@@ -30,7 +30,7 @@ export default function ProjectItem({ imgSrc, name, description, techList, links
                         let classes = ""
 
                         if (idx != 0) {
-                            classes += "mt-2"
+                            classes += "mt-4"
                         }
 
                         return <p key={idx} className={classes}>{desc}</p>
