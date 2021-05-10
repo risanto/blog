@@ -8,7 +8,7 @@ export default function About() {
             imgSrc: "/img/cooken-project.png",
             name: "Cooken",
             description: "An application where users can search recipes based on the ingredients that they have. I use a third-party API to fetch the recipes data.",
-            techList: ["react", "expressjs", "postgres", "sequelize"],
+            techList: ["react", "expressjs", "postgres", "sequelize", "tailwindcss"],
             links: [
                 {
                     name: "GIF",

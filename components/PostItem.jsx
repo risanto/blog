@@ -1,17 +1,21 @@
 import Link from 'next/link'
 import TagList from './TagList'
+import Image from 'next/image'
 
 export default function PostItem({ post }) {
     let date = new Date(post.data.date)
     date = date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
 
+    const thumbnailImg = post.data.thumbnail.includes('https') ? post.data.thumbnail : '/' + post.data.thumbnail
+
     return (
         <div className={"border dark:border-gray-700 hover:-translate-y-1 transform transition hover:duration-500 pb-2 rounded"}>
             <Link href={"/posts/" + post.data.slug}>
                 <a>
-                    <img
-                        className={"relative rounded-t"}
-                        src={post.data.thumbnail}
+                    <Image
+                        height={356} width={638}
+                        className={"rounded-t"}
+                        src={thumbnailImg}
                     />
                     <div className={"px-4 pb-2"}>
                         <h2

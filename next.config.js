@@ -1,4 +1,7 @@
 module.exports = {
+    images: {
+        domains: ['miro.medium.com'],
+    },
     future: {
         webpack5: true,
     },
