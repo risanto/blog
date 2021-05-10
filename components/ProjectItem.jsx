@@ -1,17 +1,16 @@
 import TechList from '../components/TechList'
 import ProjectLinks from '../components/ProjectLinks'
+import Image from 'next/image'
 
 export default function ProjectItem({ imgSrc, name, description, techList, links }) {
     return (
         <article className={"mt-8"} key={name}>
-            <img
+            <Image
+                width={640}
+                height={393}
                 className={"transform transition hover:-translate-y-2 hover:duration-500"}
                 alt={name + ' project'}
                 src={imgSrc}
-                style={{
-                    maxWidth: '100%',
-                    height: 'auto'
-                }}
             />
 
             <div className={"transform transition hover:-translate-y-1 hover:duration-500 flex flex-col"}>
