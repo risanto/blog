@@ -9,6 +9,7 @@ import Link from '../../components/MDXLink'
 import { useEffect, useState } from 'react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import Image from 'next/image'
 
 const components = { JobHuntChart, a: (props) => <Link {...props} /> }
 
@@ -88,19 +89,20 @@ export default function Post(props) {
             previewImage={postData.thumbnail}
             siteName={"risan.dev"}
         >
-            <header>
+            <header className={"-mb-4"}>
                 <h1 className={"text-4xl"}>{postData.title}</h1>
 
-                <div className={"mt-4 flex justify-between"}>
+                <div className={"my-4 flex justify-between"}>
                     <h6>{postData.author.name} / {date}</h6>
                     <h6>{postData.readingTime.text}</h6>
                 </div>
 
-                <img
-                    className={"mt-4"}
+                <Image
+                    width={640} height={357}
                     src={formatImgSrc(postData.thumbnail)}
                 />
-                <div className={"pt-2 relative -top-4 -right-1"}>
+
+                <div className={"pt-2 relative -top-6 -right-1"}>
                     <TagList tags={postData.tags} rowReverse={true} withBackground={true} />
                 </div>
             </header>

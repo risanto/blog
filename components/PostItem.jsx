@@ -6,7 +6,7 @@ export default function PostItem({ post }) {
     let date = new Date(post.data.date)
     date = date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
 
-    const thumbnailImg = post.data.thumbnail.includes('https') ? post.data.thumbnail : '/' + post.data.thumbnail
+    const thumbnailImg = post.data.thumbnail.includes('http') ? post.data.thumbnail : '/' + post.data.thumbnail
 
     return (
         <div className={"border dark:border-gray-700 hover:-translate-y-1 transform transition hover:duration-500 pb-2 rounded"}>
