@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 export default function TechList({ names }) {
-    const defaultClasses = "transform transition hover:-translate-y-1 hover:duration-500 z-10 flex justify-center items-center dark:bg-white "
+    const defaultClasses = "transform transition hover:-translate-y-1 hover:duration-500 z-10 flex justify-center items-center bg-white "
 
     const techItems = [
         {
@@ -13,7 +13,7 @@ export default function TechList({ names }) {
         },
         {
             name: "expressjs",
-            classes: defaultClasses + "bg-white p-1 ",
+            classes: defaultClasses + "bg-white ",
             imgSrc: "/img/expressjs.png",
             width: 90,
             height: 25
@@ -41,14 +41,14 @@ export default function TechList({ names }) {
         },
         {
             name: "nextjs",
-            classes: defaultClasses + "bg-white p-1 ",
+            classes: defaultClasses + "bg-white ",
             imgSrc: "/img/nextjs.png",
             width: 42,
             height: 25
         },
         {
             name: "netlifycms",
-            classes: defaultClasses + "bg-white p-1 ",
+            classes: defaultClasses + "bg-white ",
             imgSrc: "/img/netlifycms.png",
             width: 96,
             height: 25

@@ -5,7 +5,7 @@ export default function ProjectLinks({ items }) {
 
     return (
         <ul
-            className={"mt-4 text-sm inline-block text-right float-right"}
+            className={"mt-6 text-sm inline-block text-right float-right"}
         >
             {items.map((item, idx) => {
                 return (

@@ -17,15 +17,17 @@ export default function ProjectItem({ imgSrc, name, description, techList, links
             </div>
 
             <div className={"transform transition hover:-translate-y-1 hover:duration-500 flex flex-col"}>
-                <div className={"flex mt-4 relative top-1 dark:bg-white dark:rounded-tl dark:rounded-br mr-2"}>
-                    <h3
-                        className={"border border-indigo-50 bg-indigo-50 self-start z-10 px-2 text-lg dark:text-gray-700 rounded-tl rounded-br h-8"}
-                    >{name}</h3>
+                <div className={"flex mt-4 relative top-1 dark:bg-white dark:rounded-tl dark:rounded-br mr-2 h-10"}>
+                    <div
+                        className={"border border-indigo-50 bg-indigo-50 dark:self-start z-10 px-2 rounded-tl rounded-br h-10 flex"}
+                    >
+                        <h3 className={"place-self-center text-lg dark:text-gray-700"}>{name}</h3>
+                    </div>
 
                     <TechList names={techList} />
                 </div>
 
-                <div className={"px-5 pt-6 pb-4 border rounded-lg relative -top-3 ml-2 dark:border-gray-700"}>
+                <div className={"px-5 pt-7 pb-4 border rounded-lg relative -top-4 ml-2 dark:border-gray-700"}>
                     {description.map((desc, idx) => {
                         let classes = ""
 
