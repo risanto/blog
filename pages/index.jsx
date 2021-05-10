@@ -30,8 +30,8 @@ export default function Index({ posts, languages, tags }) {
         <Layout
             pageTitle={"Risan's Blog"}
             description={"Writings about programming and personal development."}
-            // previewImage={}
-            // siteName={}
+        // previewImage={}
+        // siteName={}
         >
             <section className={"mt-4"}>
                 <h1 className={"rounded-tl rounded-br text-xl bg-indigo-50 inline-block py-1 px-2 dark:text-black"}
@@ -45,11 +45,13 @@ export default function Index({ posts, languages, tags }) {
                 <LanguageDropdown languages={languages} />
 
                 {/* Tags */}
-                <img
-                    className={"place-self-center bg-indigo-50 rounded-l p-1 w-6"}
-                    style={{ height: '1.5rem'}}
-                    src="/img/tag.svg" height={25} width={25}
-                />
+                <svg
+                    className={"place-self-center bg-indigo-50 rounded-l p-1 -ml-4 sm:ml-2"}
+                    fill="none" height={'1.6rem'}
+                    style={{ minWidth: '25px' }}
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" /><line x1="7" x2="7" y1="7" y2="7" />
+                </svg>
                 <TagList tags={tags} />
             </section>
 
