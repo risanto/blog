@@ -7,7 +7,7 @@ export default function ProjectItem({ imgSrc, name, description, techList, links
             <img
                 className={"transform transition hover:-translate-y-2 hover:duration-500"}
                 alt={name + ' project'}
-                src={require(imgSrc)}
+                src={imgSrc}
                 style={{
                     maxWidth: '100%',
                     height: 'auto'
