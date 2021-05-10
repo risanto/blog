@@ -47,13 +47,12 @@ export default function TechList({ names }) {
             {names.map((name, idx) => {
                 const tech = techItems.find(item => item.name === name)
 
-                console.log(idx)
                 return (
                     <div
+                        key={tech.name}
                         className={tech.classes + (idx !== 0 ? "ml-1" : "")}
                     >
                         <Image
-                            key={tech.name}
                             alt={tech.name + ' logo'}
                             src={tech.imgSrc}
                             width={tech.width}
