@@ -1,6 +1,4 @@
-const withOptimizedImages = require('next-optimized-images')
-
-module.exports = withOptimizedImages({
+module.exports = {
     future: {
         webpack5: true,
     },
@@ -11,4 +9,4 @@ module.exports = withOptimizedImages({
 
         return config
     }
-})
+}
