@@ -7,7 +7,31 @@ export default function About() {
         {
             imgSrc: "/img/cooken-project.png",
             name: "Cooken",
-            description: "An application where users can search recipes based on the ingredients that they have. I use a third-party API to fetch the recipes data.",
+            description: ["An application where users can search recipes based on the ingredients that they have, using a third-party API to fetch the recipes data.", "I built it to relearn React and React Context API. I also had a great fun designing the UI mockups using Figma."],
+            techList: ["react", "expressjs", "postgres", "sequelize", "tailwindcss"],
+            links: [
+                {
+                    name: "GIF",
+                    href: "https://s4.gifyu.com/images/cooken.gif"
+                },
+                {
+                    name: "Live site",
+                    href: "https://cooken.netlify.app"
+                },
+                {
+                    name: "Github",
+                    href: "https://github.com/risanto/cooken"
+                },
+                {
+                    name: "Blog",
+                    href: "https://github.com/risanto/cooken"
+                }
+            ],
+        },
+        {
+            imgSrc: "/img/cooken-project.png",
+            name: "Risan.dev",
+            description: ["A personal blog/portfolio site that I made to contain my writings and showcase my personal projects, utilising Netlify CMS to manage the posts.", "From making it I learned to utilise Next.js and server-side rendering to build a single page application that loads quickly and also attends to SEO."],
             techList: ["react", "expressjs", "postgres", "sequelize", "tailwindcss"],
             links: [
                 {

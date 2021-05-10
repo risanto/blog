@@ -25,8 +25,16 @@ export default function ProjectItem({ imgSrc, name, description, techList, links
                     <TechList names={techList} />
                 </div>
 
-                <div className={"px-4 pt-5 pb-4 border rounded-lg relative -top-3 ml-2 dark:border-gray-700"}>
-                    <p>{description}</p>
+                <div className={"px-5 pt-6 pb-4 border rounded-lg relative -top-3 ml-2 dark:border-gray-700"}>
+                    {description.map((desc, idx) => {
+                        let classes = ""
+
+                        if (idx != 0) {
+                            classes += "mt-2"
+                        }
+
+                        return <p key={idx} className={classes}>{desc}</p>
+                    })}
 
                     <ProjectLinks items={links} />
                 </div>

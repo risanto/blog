@@ -1,6 +1,6 @@
 export default function ProjectLinks({ items }) {
     return (
-        <ul className={"mt-2 text-sm float-right flex"}>
+        <ul className={"mt-4 text-sm float-right flex"}>
             {items.map(item => {
                 return (
                     <li key={item.name}>
