@@ -22,7 +22,7 @@ export default function ProjectLinks({ items }) {
 
                             {/* Add breaking space in small viewport to split links more equally */}
                             {( 
-                                width < 450 && items.length >= 5
+                                width < 450 && items.length >= 4
                                 && idx === Math.floor(items.length / 2) - 1
                             ) && <br />
                             }

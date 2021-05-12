@@ -39,12 +39,32 @@ export default function About() {
             techList: ["nextjs", "netlifycms", "tailwindcss"],
             links: [
                 {
+                    name: "GIF (mobile)",
+                    href: "https://s3.gifyu.com/images/risandev-mobile.gif"
+                },
+                {
+                    name: "GIF (desktop)",
+                    href: "https://s3.gifyu.com/images/risandev34d1d35964663566.gif"
+                },
+                {
                     name: "Live site",
                     href: "https://risan.dev"
                 },
                 {
                     name: "Github",
                     href: "https://github.com/risanto/porto-blog"
+                }
+            ],
+        },
+        {
+            imgSrc: "/img/curatube-project.png",
+            name: "Curatube",
+            description: ["Playlists of YouTube videos curated by me, also accepts user submissions. Currently still under construction."],
+            techList: ["react", "tailwindcss"],
+            links: [
+                {
+                    name: "Github",
+                    href: "https://github.com/risanto/curatube"
                 }
             ],
         }
