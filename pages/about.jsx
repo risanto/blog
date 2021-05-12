@@ -12,7 +12,7 @@ export default function About() {
             links: [
                 {
                     name: "GIF (mobile)",
-                    href: "https://s4.gifyu.com/images/cooken.gif"
+                    href: "https://s3.gifyu.com/images/cooken-mobile.gif"
                 },
                 {
                     name: "GIF (desktop)",
@@ -28,12 +28,12 @@ export default function About() {
                 },
                 {
                     name: "Blog",
-                    href: "https://github.com/risanto/cooken"
+                    href: "https://risan.dev/posts/reacquainting-with-react-cookens-development-journey"
                 }
             ],
         },
         {
-            imgSrc: "/img/cooken-project.png",
+            imgSrc: "/img/risandev-project.png",
             name: "Risan.dev",
             description: ["A personal blog/portfolio site that I made to contain my writings and showcase my personal projects, utilising Netlify CMS to manage the posts.", "From making it I learned to use Next.js and server-side rendering to build a single-page application that loads quickly and also attends to SEO."],
             techList: ["nextjs", "netlifycms", "tailwindcss"],
