@@ -3,7 +3,6 @@ backend:
   name: github #to be used after deployed to netlify
   repo: risanto/porto-blog
   branch: main
-  base_url: risan.dev
 publish_mode: editorial_workflow
 media_folder: public/img
 public_folder: img
