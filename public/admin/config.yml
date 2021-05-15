@@ -1,6 +1,6 @@
 backend:
   # name: test-repo #to be used locally
-  name: [github | gitlab] #to be used after deployed to netlify
+  name: github #to be used after deployed to netlify
   repo: risanto/porto-blog
   branch: main
   base_url: blog-git-main-risanto.vercel.app
