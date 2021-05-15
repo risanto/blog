@@ -129,7 +129,7 @@ export default function Post(props) {
             siteName={"risan.dev"}
         >
             <header className={"-mb-4"}>
-                <h1 className={"text-4xl font-bold"}>{postData.title}</h1>
+                <h1 className={"text-3xl font-bold"}>{postData.title}</h1>
 
                 <div className={"my-4 flex justify-between"}>
                     <h6>{postData.author.name} / {date}</h6>
