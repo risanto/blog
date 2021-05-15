@@ -50,7 +50,7 @@ h4, h5, h6 {
 }
 
 .cms-content {
-  @apply pb-10 break-words;
+  @apply pb-20 break-words;
 
   pre {
     @apply overflow-x-auto bg-gray-50 p-4 mt-2;
@@ -110,7 +110,7 @@ h4, h5, h6 {
   }
 
   ul, ol {
-    @apply list-outside ml-6;
+    @apply list-outside ml-6 -mb-4;
   }
 
   ul {
