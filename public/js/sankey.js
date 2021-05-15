@@ -27,7 +27,8 @@ function drawChart() {
 
   // Sets chart options.
   var options = {
-    width: 1000,
+    width: 900,
+    height: 500
   };
 
   // Instantiates and draws our chart, passing in some options.
