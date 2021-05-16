@@ -38,10 +38,6 @@ export default function Layout({ children, pageTitle, description, previewImage,
 
                 {/*  Google Console */}
                 <meta name="google-site-verification" content="wFzmqB_u3xfCcWuiOfPHFeETHAkSXN2aTnzRxV_s0uA" />
-
-                {/* Sankey */}
-                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                <script type="text/javascript" src="/js/sankey.js"></script>
             </Head>
             <div className={"flex justify-center"}>
                 <Nav />
