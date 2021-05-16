@@ -2,8 +2,6 @@ google.charts.load('current', {
   'packages': ['sankey']
 });
 
-console.log('Package Sankey from Google Charts has been loaded')
-
 // google.charts.setOnLoadCallback(drawChart);
 
 // function drawChart() {
