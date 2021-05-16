@@ -72,7 +72,7 @@ export default function Post(props) {
     }
 
     useEffect(() => {
-        if (postData.slug === "what-ive-learned-from-three-weeks-of-job hunting") {
+        if (postData.slug === "what-ive-learned-from-three-weeks-of-job hunting" && google.visualization) {
             function drawChart() {
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'From');
