@@ -82,7 +82,7 @@ export default function About() {
 
             <p className={"mt-4"}>I enjoy using <span className={"bg-indigo-50 dark:text-gray-700"}>Node.js / Express / PostgreSQL / Sequelize</span> on the backend and <span className={"bg-indigo-50 dark:text-gray-700"}>React / Next.js</span> on the frontend.</p>
 
-            <p className={"mt-4"}>I started this personal site to write about programming, personal development, and also showcase my personal projects.</p>
+            <p className={"mt-4"}>I started this personal site to write about programming, career, personal development, and also showcase my personal projects.</p>
 
             {/* External sites */}
             <div className={"mt-8 flex"}>

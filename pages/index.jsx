@@ -37,7 +37,7 @@ export default function Index({ posts, languages, tags }) {
                 <h1 className={"rounded-tl-lg rounded-br-lg text-xl bg-indigo-50 inline-block py-1 px-2 dark:text-black"}
                 >Hello, I'm Risan :)</h1>
 
-                <p className={"mt-2 relative left-2 pr-2 md:pr-6 inline-block"}>I'm a full stack developer who likes to write about programming and personal development. I just recently started this blog so expect more contents to come!</p>
+                <p className={"mt-2 relative left-2 pr-2 md:pr-6 inline-block"}>I'm a full stack developer who likes to write about programming, career, and personal development. I just recently started this blog so expect more contents to come!</p>
             </section>
 
             <section className={"flex mt-6"}>
