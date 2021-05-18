@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function About() {
     const projects = [
         {
-            imgSrc: "/img/cooken-project.png",
+            imgSrc: "/img/cooken-project_640x393.png",
             name: "Cooken",
             description: ["An application where users can search recipes based on the ingredients that they have, using a third-party API to fetch the recipes data.", "I built it to relearn React and React Context API. I also had a great fun designing the UI mockups using Figma."],
             techList: ["react", "expressjs", "postgres", "sequelize", "tailwindcss"],
