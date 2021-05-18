@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes'
 
 export default function Nav() {
     const { theme, setTheme } = useTheme()
+    // console.log(theme, window.matchMedia('(prefers-color-scheme: dark)').matches)
 
     return (
         <nav className={"w-full z-10 flex py-4 justify-between fixed top-0 bg-white dark:bg-gradient-to-r dark:bg-black max-w-screen-md mx-auto px-8"}>
@@ -28,7 +29,7 @@ export default function Nav() {
                 suppressHydrationWarning={true}
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
-                {theme === 'dark' && (
+                {(theme === 'dark' || theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) && (
                     <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg">
                     <g>
                      <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
@@ -47,7 +48,7 @@ export default function Nav() {
                     </g>
                    </svg>
                 )}
-                {(theme === 'light' || theme === 'system') && (
+                {(theme === 'light' || theme === 'system' && window.matchMedia('(prefers-color-scheme: light)').matches) && (
                     <svg width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.21,15.32A8.56,8.56,0,1,1,11.29,3.5a.5.5,0,0,1,.51.28.49.49,0,0,1-.09.57A6.46,6.46,0,0,0,9.8,9a6.57,6.57,0,0,0,9.71,5.72.52.52,0,0,1,.58.07A.52.52,0,0,1,20.21,15.32Z" fill="#464646"/>
                     </svg>
